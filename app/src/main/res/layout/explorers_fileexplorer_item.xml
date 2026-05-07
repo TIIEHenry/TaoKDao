@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="@dimen/explorers_fileexplorer_item_H"
+	android:background="@drawable/main_content_rectangle_selector"
+	android:orientation="horizontal">
+	
+	<ImageView
+		android:id="@+id/iv_icon"
+		android:layout_width="@dimen/explorers_fileexplorer_item_H"
+		android:layout_height="@dimen/explorers_fileexplorer_item_H"
+		android:layout_marginStart="5dp"
+		android:padding="10dp"
+		android:scaleType="fitCenter" />
+	
+	<TextView
+		android:id="@+id/tv_label"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:ellipsize="middle"
+		android:gravity="center_vertical"
+		android:singleLine="true"
+		android:textColor="?attr/main_content_foreground_color"
+		android:textSize="16sp" />
+</LinearLayout>

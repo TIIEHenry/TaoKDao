@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+	android:padding="0dp"
+	android:shape="rectangle">
+	<stroke
+		android:width="2dp"
+		android:color="?attr/main_content_background_color" />
+	<solid android:color="?attr/main_content_background_color_hint" />
+	<corners
+		android:bottomLeftRadius="@dimen/plugin_launcher_search_edit_bg_horizontal_radius"
+		android:bottomRightRadius="@dimen/plugin_launcher_search_edit_bg_horizontal_radius"
+		android:topLeftRadius="@dimen/plugin_launcher_search_edit_bg_horizontal_radius"
+		android:topRightRadius="@dimen/plugin_launcher_search_edit_bg_horizontal_radius" />
+</shape>

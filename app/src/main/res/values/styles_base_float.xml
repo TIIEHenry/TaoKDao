@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<style name="Main.Bottom.Clickable" parent="Clickable"></style>
+	
+	<style name="Main.Bottom"></style>
+	
+	
+	<style name="Main.Float.Image.Button.Round" parent="Main.Float.Button.Round"></style>
+	
+	<style name="Main.Float.Image.Button.Rectangle" parent="Main.Float.Button.Rectangle"></style>
+	
+	<style name="Main.Float.Text.Button.Round" parent="Main.Float.Button.Round"></style>
+	
+	<style name="Main.Float.Text.Button.Rectangle" parent="Main.Float.Button.Rectangle"></style>
+	
+	<style name="Main.Float.Button.Round" parent="Main.Float.Clickable.Round"></style>
+	
+	<style name="Main.Float.Button.Rectangle" parent="Main.Float.Clickable.Rectangle"></style>
+	
+	<style name="Main.Float.Clickable.Round">
+		<item name="android:background">@drawable/main_float_round_selector</item>
+	</style>
+	
+	<style name="Main.Float.Clickable.Rectangle">
+		<item name="android:background">@drawable/main_float_rectangle_selector</item>
+	</style>
+	
+	
+	<style name="Main.Float.Text" parent="Widget.AppCompat.TextView">
+		<item name="android:textColor">?attr/main_float_foreground_color</item>
+		<item name="android:textColorHint">?attr/main_float_foreground_color_hint</item>
+		<item name="android:textColorHighlight">?attr/main_float_foreground_color_accent</item>
+	</style>
+	
+	<style name="Main.Float.Image">
+		<item name="android:scaleType">fitCenter</item>
+	</style>
+	
+	<style name="Main.Float.Clickable" parent="Clickable"></style>
+	
+	<style name="Main.Float"></style>
+
+</resources>

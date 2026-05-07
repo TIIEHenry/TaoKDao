@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+	<dimen name="codeeditor_autocomplete_list_item_H">42dp</dimen>
+	
+	<dimen name="contents_guider_category_H">40dp</dimen>
+	<dimen name="contents_guider_entry_H">36dp</dimen>
+	
+	<dimen name="explorer_menu_item_iv_padding">10dp</dimen>
+	<dimen name="explorer_menu_expanded_item_H">40dp</dimen>
+	<dimen name="explorer_menu_expanded_item_icon_margin">8dp</dimen>
+	<dimen name="explorer_menu_expanded_item_iv_WH">24dp</dimen>
+	<dimen name="explorer_menu_expanded_item_padding">5dp</dimen>
+	<dimen name="explorer_public_tree_item_H">36dp</dimen>
+	
+	<dimen name="explorers_fileexplorer_item_H">40dp</dimen>
+	
+	<dimen name="main_side_radius">4dp</dimen>
+	
+	<dimen name="quick_control_btn_H">36dp</dimen>
+	<dimen name="quick_control_btn_W">44dp</dimen>
+	<dimen name="quick_control_btn_radius">18dp</dimen>
+	<dimen name="quick_edit_float_H">36dp</dimen>
+	<dimen name="quick_edit_float_W">40dp</dimen>
+	<dimen name="quick_edit_float_padding_other">5dp</dimen>
+	<dimen name="quick_edit_float_padding_start">12dp</dimen>
+	<dimen name="quick_edit_float_radius">18dp</dimen>
+	<dimen name="quick_input_layout_H">38dp</dimen>
+	
+	<dimen name="setting_preference_item_H">50dp</dimen>
+	<dimen name="setting_preference_item_Padding">7dp</dimen>
+	<dimen name="setting_preference_item_category_padding">4dp</dimen>
+	<dimen name="setting_preference_item_check_padding">7dp</dimen>
+	<dimen name="setting_preference_item_description_size">13sp</dimen>
+	<dimen name="setting_preference_item_group_Padding">14dp</dimen>
+	<dimen name="setting_preference_item_group_icon_WH">20dp</dimen>
+	<dimen name="setting_preference_item_group_separator_Padding">4dp</dimen>
+	<dimen name="setting_preference_item_group_title_size">12sp</dimen>
+	<dimen name="setting_preference_item_icon_WH">36dp</dimen>
+	<dimen name="setting_preference_item_switch_padding">4dp</dimen>
+	<dimen name="setting_preference_item_text_size">12sp</dimen>
+	<dimen name="setting_preference_item_title_size">16sp</dimen>
+	
+	<dimen name="toolbar_contentlist_item_H">36dp</dimen>
+	<dimen name="toolbar_contentlist_item_icon_H">18dp</dimen>
+	<dimen name="toolbar_contentlist_item_icon_margin">6dp</dimen>
+	<dimen name="toolbar_controlmenu_item_H">40dp</dimen>
+	<dimen name="toolbar_controlmenu_item_iv_WH">24dp</dimen>
+	<dimen name="toolbar_controlmenu_item_iv_margin">8dp</dimen>
+	<dimen name="toolbar_indicator_radius">4dp</dimen>
+	<dimen name="toolbar_logo_W">52dp</dimen>
+	<dimen name="toolbar_logo_H">44dp</dimen>
+	<dimen name="toolbar_logo_marginStart">4dp</dimen>
+	<dimen name="toolbar_logo_icon_WH">36dp</dimen>
+	<dimen name="toolbar_logo_icon_top">4dp</dimen>
+	<dimen name="toolbar_logo_left">8dp</dimen>
+	<dimen name="toolbar_logo_radius">18dp</dimen>
+	<dimen name="toolbar_mainmenu_item_H">40dp</dimen>
+	<dimen name="toolbar_mainmenu_padding">3dp</dimen>
+	<dimen name="toolbar_menu_item_W">44dp</dimen>
+	<dimen name="toolbar_menu_layout_H">44dp</dimen>
+	
+	<dimen name="toolpage_bar_H">34dp</dimen>
+	<dimen name="toolpage_bar_H_more">46dp</dimen>
+	<dimen name="toolpage_bar_item_layout_padding">3dp</dimen>
+	<dimen name="toolpage_bar_iv">20dp</dimen>
+	<dimen name="toolpage_bar_iv_padding">7dp</dimen>
+	<dimen name="toolpage_bar_label_size">14sp</dimen>
+	<dimen name="toolpage_bar_tab_H">34dp</dimen>
+	<dimen name="toolpage_bar_tab_iv_WH">20dp</dimen>
+	<dimen name="toolpage_public_tree_item_icon_WH">36dp</dimen>
+	<dimen name="toolpage_public_tree_item_icon_padding">8dp</dimen>
+	<dimen name="toolpage_public_tree_item_text_size">14sp</dimen>
+	<dimen name="toolpage_public_zoom_control_iv_W">36dp</dimen>
+	<dimen name="toolpage_public_zoom_controls_H">28dp</dimen>
+	
+	<dimen name="toolpages_logcat_toolbar_H">30dp</dimen>
+	
+	<dimen name="ui_drawable_popup_background_radius">3dp</dimen>
+	<dimen name="toolpage_peek_height">500dp</dimen>
+</resources>

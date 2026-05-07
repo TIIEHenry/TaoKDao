@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdk 36
+
+    defaultConfig {
+        minSdkVersion 28
+        targetSdkVersion 36
+        versionCode 1
+        versionName "1.0"
+
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(":CodeEditor")
+    implementation "io.noties.markwon:core:4.2.1"
+    implementation group: 'io.noties.markwon', name: 'ext-tables', version: '4.2.1'
+    implementation group: 'io.noties.markwon', name: 'recycler', version: '4.2.1'
+    implementation group: 'io.noties.markwon', name: 'ext-tables', version: '4.2.1'
+}

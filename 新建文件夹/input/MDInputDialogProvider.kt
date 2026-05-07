@@ -1,0 +1,11 @@
+package taokdao.main.business.dialog_manage.input
+
+import android.content.Context
+import tiiehenry.android.ui.dialogs.api.strategy.input.IInputDialogBuilder
+import tiiehenry.android.ui.dialogs.api.strategy.input.IInputDialogProvider
+
+class MDInputDialogProvider(val context: Context) : IInputDialogProvider {
+    override fun builder(): IInputDialogBuilder {
+        return MDInputDialogBuilder(context)
+    }
+}

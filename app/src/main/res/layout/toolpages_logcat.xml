@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="?attr/main_appbar_background_color"
+	android:orientation="vertical"
+	android:paddingStart="1dp"
+	android:paddingEnd="1dp">
+	
+	<LinearLayout
+		android:id="@+id/ll_toolpages_logcat"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/toolpages_logcat_toolbar_H"
+		android:background="?attr/main_appbar_background_color"
+		android:elevation="2dp"
+		android:orientation="horizontal"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+		
+		
+		<TextView
+			android:id="@+id/tv_toolpages_logcat_process"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/toolpages_logcat_toolbar_H"
+			android:background="@drawable/main_appbar_rectangle_selector"
+			android:ellipsize="middle"
+			android:gravity="center"
+			android:hint="process"
+			android:maxWidth="100dp"
+			android:paddingStart="2dp"
+			android:paddingEnd="2dp"
+			android:singleLine="true"
+			android:textColor="?attr/main_appbar_foreground_color"
+			android:textColorHint="?attr/main_appbar_foreground_color_hint"
+			android:textSize="13sp"
+			android:typeface="monospace" />
+		
+		<TextView
+			android:id="@+id/tv_toolpages_logcat_tag"
+			android:layout_width="100dp"
+			android:layout_height="@dimen/toolpages_logcat_toolbar_H"
+			android:background="@drawable/main_appbar_rectangle_selector"
+			android:gravity="center"
+			android:hint="Tag Filter"
+			android:lines="1"
+			android:maxWidth="100dp"
+			android:paddingStart="2dp"
+			android:paddingEnd="2dp"
+			android:textColor="?attr/main_appbar_foreground_color"
+			android:textColorHint="?attr/main_appbar_foreground_color_hint"
+			android:textSize="14sp"
+			android:typeface="monospace" />
+		
+		<TextView
+			android:id="@+id/tv_toolpages_logcat_level"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/toolpages_logcat_toolbar_H"
+			android:background="@drawable/main_appbar_rectangle_selector"
+			android:ellipsize="middle"
+			android:gravity="center"
+			android:hint="level"
+			android:minWidth="@dimen/toolpages_logcat_toolbar_H"
+			android:paddingStart="2dp"
+			android:paddingEnd="2dp"
+			android:singleLine="true"
+			android:textColor="?attr/main_appbar_foreground_color"
+			android:textColorHint="?attr/main_appbar_foreground_color_hint"
+			android:textSize="14sp"
+			android:typeface="monospace" />
+		
+		
+		<EditText
+			android:id="@+id/et_toolpages_logcat_filter"
+			android:layout_width="0dp"
+			android:layout_height="@dimen/toolpages_logcat_toolbar_H"
+			android:layout_weight="1"
+			android:background="@drawable/main_appbar_rectangle_selector"
+			android:ellipsize="end"
+			android:gravity="center"
+			android:hint="@string/tabfragment_logcat_filter_content"
+			android:lines="1"
+			android:minWidth="60dp"
+			android:paddingStart="2dp"
+			android:paddingEnd="2dp"
+			android:textColor="?attr/main_appbar_foreground_color"
+			android:textColorHint="?attr/main_appbar_foreground_color_hint"
+			android:textSize="14sp"
+			android:typeface="monospace" />
+	
+	</LinearLayout>
+	
+	<HorizontalScrollView
+		android:id="@+id/hsv_toolpages_logcat"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:background="?attr/main_bottom_background_color"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/ll_toolpages_logcat">
+		
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/rv_toolpages_logcat"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:scrollbars="vertical" />
+	
+	</HorizontalScrollView>
+	
+	<include
+		android:id="@+id/toolpage_public_zoom_controls"
+		layout="@layout/toolpage_public_zoom_controls"
+		android:layout_width="wrap_content"
+		android:layout_height="@dimen/toolpage_public_zoom_controls_H"
+		android:layout_margin="@dimen/toolpage_public_zoom_controls_H"
+		app:layout_constraintBottom_toBottomOf="@id/hsv_toolpages_logcat"
+		app:layout_constraintEnd_toEndOf="@id/hsv_toolpages_logcat" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,65 @@
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+
+        maven {
+            url 'https://maven.aliyun.com/repository/gradle-plugin'
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 'https://maven.aliyun.com/repository/google'
+        }
+
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+        }
+        maven { url 'https://jitpack.io' }
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+
+
+rootProject.name = "TaoKDao"
+
+include ':app',
+//        ':builderc',
+//        ':lib-jdk-1_7',
+//        ":lib-google-java-format",
+        ':DynamicLoader',
+        ':CodeEditor',
+        ':CodeEditorAntlr'
+//include        ':CodeEditorClient'
+//        ':CodeEditorAntlr-smali',
+//        ':markwon-editor',
+//        ':dx',
+//        ':MarkDownViewer-release'
+
+includeBuild '../TaoKDao-API'
+//includeBuild '../Android-Dialogs-Interface'
+//includeBuild '../../DynamicLoader'
+//includeBuild '../../MarkDownViewer'
+//includeBuild '../../Nota-Toolkit/Nota-Toolkit'
+//includeBuild '../../Nota-Toolkit/Nota-Toolkit-Android'
+//includeBuild '../../ScriptWrapper/ScriptWrapper'
+//includeBuild '../../ScriptWrapper/ScriptWrapperCollection'
+//includeBuild '../../ScriptWrapper/ScriptWrapperApp'
+//includeBuild '../../Shadow'
+
+include ':common'

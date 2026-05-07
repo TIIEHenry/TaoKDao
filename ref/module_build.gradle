@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'flyme.ai.engine.app'
+    compileSdkVersion 36
+
+    def appVersionCode = 40003080
+    def appVersionName = "4.3.8"
+
+    defaultConfig {
+        applicationId "flyme.ai.engine.app"
+        minSdk 31
+        targetSdk 36
+
+        versionCode appVersionCode
+        versionName appVersionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("../test.jks")
+            storePassword "123456"
+            keyAlias "test"
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            debuggable false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlin {
+        compilerOptions {
+            languageVersion = org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_2_3
+        }
+    }
+
+    buildFeatures {
+        aidl = true
+        buildConfig = true
+        viewBinding true
+    }
+    packagingOptions {
+        jniLibs {
+            pickFirsts += ['lib/arm64-v8a/libomp.so']
+        }
+        resources {
+            excludes += ['META-INF/DEPENDENCIES']
+            excludes += ['META-INF/scm/**']
+        }
+    }
+    splits {
+        abi {
+            enable true // 启用 ABI 分割
+            reset() // 重置之前的配置
+            //noinspection ChromeOsAbiSupport
+            include 'arm64-v8a'
+            universalApk false
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'])
+
+    implementation "androidx.preference:preference:1.2.1"
+    implementation "androidx.core:core-ktx:1.17.0"
+    implementation "androidx.work:work-runtime-ktx:2.11.1"
+    implementation 'androidx.exifinterface:exifinterface:1.4.2'
+
+    implementation "com.alibaba:fastjson:2.0.60"
+    implementation "com.google.code.gson:gson:2.13.2"
+    implementation "com.squareup.okhttp3:okhttp:5.3.2"
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.3.2'
+    implementation 'com.tencent.tav:libpag:4.5.27'
+    implementation "com.github.tonyofrancis.Fetch:fetch2:3.4.1"
+
+    implementation project(path: ':api')
+    implementation project(path: ':api-inject')
+    implementation project(path: ':core-runtime')
+    implementation project(path: ':common-base')
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
+}

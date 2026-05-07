@@ -1,0 +1,1 @@
+{"description":"c source file","extension":"c","group":"C++","name":"C Source File","parameters":["HEADER_FILENAME"],"templateText":"#if (${HEADER_FILENAME})\n#[[#include]]# \"${HEADER_FILENAME}\"\n#end\n"}

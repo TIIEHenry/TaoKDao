@@ -1,0 +1,1 @@
+{"description":"package info","extension":"java","group":"Java","name":"package-info","parameters":["PACKAGE_NAME"],"templateText":"#if (${} && ${PGE_NAME} != \"\")package ${PACKAGE_NAME};#end"}

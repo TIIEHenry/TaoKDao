@@ -1,0 +1,1 @@
+{"description":"module info","extension":"java","group":"Java","name":"module-info","parameters":["MODULE_NAME"],"templateText":"module #[[$MODULE_NAME$]]# {\n}"}

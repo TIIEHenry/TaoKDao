@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/replace_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_menu_layout_H"
+    android:background="?attr/main_bottom_background_color"
+    android:elevation="2dp"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:visibility="visible"
+    tools:showIn="@layout/contents_codeeditor">
+
+    <EditText
+        android:id="@+id/replace_edit_input"
+        style="@style/Main.Bottom.Text.CodeEditor_FindReplace_EditText"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:hint="@string/contents_codeeditor_findreplace_replace_text"
+        android:importantForAutofill="no"
+        android:textColor="?attr/main_bottom_foreground_color"
+        android:textColorHint="?attr/main_bottom_foreground_color_hint"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/replace_replace_one"
+        style="@style/Main.Bottom.Text.Button.Rectangle.CodeEditor_FindReplace"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/contents_codeeditor_findreplace_replace"
+        android:textColor="?attr/main_bottom_foreground_color" />
+
+    <Button
+        android:id="@+id/replace_replace_all"
+        style="@style/Main.Bottom.Text.Button.Rectangle.CodeEditor_FindReplace"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/contents_codeeditor_findreplace_replace_all"
+        android:textColor="?attr/main_bottom_foreground_color" />
+</LinearLayout>

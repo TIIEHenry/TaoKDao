@@ -1,0 +1,23 @@
+apply plugin: 'com.android.library'
+
+android {
+    namespace "tiiehenry.code.editor"
+    compileSdk 36
+
+    defaultConfig {
+        minSdkVersion 28
+        targetSdkVersion 36
+        versionCode 1
+        versionName "1.0"
+
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    api project(':TaoKDao-API:ac-api_public')
+    implementation 'org.eclipse.lsp4j:org.eclipse.lsp4j:1.0.0'
+}

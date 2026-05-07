@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<style name="Main.ToolGroup.Bar.Item.Label">
+		<item name="android:textSize">@dimen/toolpage_bar_label_size</item>
+		<item name="android:textColor">?attr/main_appbar_foreground_color</item>
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:layout_marginStart">0dp</item>
+		<item name="android:layout_marginEnd">@dimen/toolpage_bar_iv_padding</item>
+		<item name="android:maxWidth">100dp</item>
+		<item name="android:ellipsize">middle</item>
+		<item name="android:singleLine">true</item>
+	</style>
+	
+	<style name="Main.ToolGroup.Bar.Item.Icon">
+		<item name="android:padding">@dimen/toolpage_bar_iv_padding</item>
+		<item name="android:scaleType">fitCenter</item>
+	</style>
+	
+	<style name="Main.ToolGroup.Bar.Item">
+	</style>
+	
+	<style name="Main.ToolGroup.Bar"></style>
+	
+	<style name="Main.ToolGroup"></style>
+
+</resources>

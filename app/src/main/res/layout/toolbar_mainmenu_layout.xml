@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="180dp"
+	android:layout_height="wrap_content"
+	android:background="@drawable/mainmenu_category_popup_bg"
+	android:orientation="horizontal"
+	android:paddingTop="@dimen/toolbar_mainmenu_padding"
+	android:paddingBottom="@dimen/toolbar_mainmenu_padding">
+	
+	<LinearLayout
+		android:id="@+id/ll_main_menu_category"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		
+		<ImageView
+			android:id="@id/iv_main_menu_file"
+			style="@style/Main.Appbar.Image.Button.Round.MenuPopup_ImageView"
+			android:layout_width="@dimen/toolbar_mainmenu_item_H"
+			android:layout_height="@dimen/toolbar_mainmenu_item_H"
+			android:src="@drawable/mainmenus_file_icon" />
+		
+		<ImageView
+			android:id="@id/iv_main_menu_edit"
+			style="@style/Main.Appbar.Image.Button.Round.MenuPopup_ImageView"
+			android:layout_width="@dimen/toolbar_mainmenu_item_H"
+			android:layout_height="@dimen/toolbar_mainmenu_item_H"
+			android:src="@drawable/mainmenus_edit_icon" />
+		
+		<ImageView
+			android:id="@id/iv_main_menu_build"
+			style="@style/Main.Appbar.Image.Button.Round.MenuPopup_ImageView"
+			android:layout_width="@dimen/toolbar_mainmenu_item_H"
+			android:layout_height="@dimen/toolbar_mainmenu_item_H"
+			android:src="@drawable/mainmenus_build_icon" />
+		
+		<ImageView
+			android:id="@id/iv_main_menu_project"
+			style="@style/Main.Appbar.Image.Button.Round.MenuPopup_ImageView"
+			android:layout_width="@dimen/toolbar_mainmenu_item_H"
+			android:layout_height="@dimen/toolbar_mainmenu_item_H"
+			android:src="@drawable/mainmenus_project_icon" />
+		
+		<ImageView
+			android:id="@id/iv_main_menu_display"
+			style="@style/Main.Appbar.Image.Button.Round.MenuPopup_ImageView"
+			android:layout_width="@dimen/toolbar_mainmenu_item_H"
+			android:layout_height="@dimen/toolbar_mainmenu_item_H"
+			android:src="@drawable/mainmenus_display_icon" />
+		
+		<ImageView
+			android:id="@id/iv_main_menu_tool"
+			style="@style/Main.Appbar.Image.Button.Round.MenuPopup_ImageView"
+			android:layout_width="@dimen/toolbar_mainmenu_item_H"
+			android:layout_height="@dimen/toolbar_mainmenu_item_H"
+			android:src="@drawable/mainmenus_tool_icon" />
+		
+		<ImageView
+			android:id="@id/iv_main_menu_setting"
+			style="@style/Main.Appbar.Image.Button.Round.MenuPopup_ImageView"
+			android:layout_width="@dimen/toolbar_mainmenu_item_H"
+			android:layout_height="@dimen/toolbar_mainmenu_item_H"
+			android:src="@drawable/mainmenus_setting_icon" />
+	</LinearLayout>
+	
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/rv_main_menu"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="?attr/main_content_background_color"
+		android:elevation="0dp"
+		android:minHeight="280dp" />
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--    App基本颜色-->
+
+	<color name="splash_background">#343635</color>
+
+	<color name="main_bottom_log_v_color_light">#333333</color>
+	<color name="main_bottom_log_d_color_light">#333333</color>
+	<color name="main_bottom_log_i_color_light">#333333</color>
+	<color name="main_bottom_log_w_color_light">#333333</color>
+	<color name="main_bottom_log_e_color_light">#ee3333</color>
+	<color name="main_bottom_log_a_color_light">#ee3333</color>
+
+	<color name="main_bottom_log_v_color_dark">#dddddd</color>
+	<color name="main_bottom_log_d_color_dark">#dddddd</color>
+	<color name="main_bottom_log_i_color_dark">#dddddd</color>
+	<color name="main_bottom_log_w_color_dark">#dddddd</color>
+	<color name="main_bottom_log_e_color_dark">#ee3333</color>
+	<color name="main_bottom_log_a_color_dark">#ee3333</color>
+</resources>

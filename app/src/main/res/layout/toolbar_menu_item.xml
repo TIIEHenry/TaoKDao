@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/ibtn_toolbar_menu_item"
+	style="@style/Main.Appbar.Image.Button.Round.Toolbar"
+	android:layout_width="@dimen/toolbar_menu_item_W"
+	android:layout_height="@dimen/toolbar_menu_layout_H"
+	android:padding="10dp"
+	android:scaleType="fitCenter" />
+	

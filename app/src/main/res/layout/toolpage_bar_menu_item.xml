@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="wrap_content"
+	android:layout_height="match_parent"
+	android:background="@drawable/main_appbar_rectangle_selector"
+	android:gravity="center"
+	android:orientation="horizontal"
+	android:padding="@dimen/toolpage_bar_item_layout_padding">
+	
+	<ImageView
+		android:id="@+id/iv_tabtool_bar_menu_item_icon"
+		style="@style/Main.ToolGroup.Bar.Item.Icon"
+		android:layout_width="@dimen/toolpage_bar_H"
+		android:layout_height="@dimen/toolpage_bar_H"
+		tools:src="@drawable/toolpage_menu_menu" />
+	
+	<TextView
+		android:id="@+id/tv_tabtool_bar_menu_item_label"
+		style="@style/Main.ToolGroup.Bar.Item.Label"
+		android:layout_width="wrap_content"
+		android:layout_height="@dimen/toolpage_bar_H" />
+</LinearLayout>

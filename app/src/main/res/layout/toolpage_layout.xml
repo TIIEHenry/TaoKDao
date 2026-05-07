@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/cl_toolpage"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:ignore="ContentDescription">
+	
+<!--	<View-->
+<!--		android:id="@+id/v_explorer_statusbar"-->
+<!--		android:layout_width="match_parent"-->
+<!--		android:layout_height="30dp"-->
+<!--		android:background="?attr/main_appbar_background_color"-->
+<!--		android:elevation="3dp"-->
+<!--		android:visibility="gone"-->
+<!--		app:layout_constraintEnd_toEndOf="parent"-->
+<!--		app:layout_constraintStart_toStartOf="parent"-->
+<!--		app:layout_constraintTop_toTopOf="parent" />-->
+	
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/nsc_toolpage_toolbar"
+		android:layout_width="0dp"
+		android:layout_height="@dimen/toolpage_bar_H"
+		android:background="?attr/main_appbar_background_color"
+		android:elevation="3dp"
+		android:fillViewport="true"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/v_explorer_statusbar">
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/toolpage_bar_H"
+			android:orientation="horizontal">
+			
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:background="?attr/main_appbar_background_color"
+				android:orientation="horizontal">
+				
+				<LinearLayout
+					android:id="@+id/ll_toolpage_toolbar_menu"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:background="@drawable/main_appbar_rectangle_selector"
+					android:gravity="center"
+					android:orientation="horizontal">
+					
+					<ImageView
+						android:id="@+id/iv_toolpage_toolbar_menu_icon"
+						android:layout_width="@dimen/toolpage_bar_H"
+						android:layout_height="@dimen/toolpage_bar_H"
+						style="@style/Main.ToolGroup.Bar.Item.Icon"
+						app:srcCompat="@drawable/toolpage_menu_menu" />
+					
+					<TextView
+						android:id="@+id/tv_toolpage_toolbar_menu_label"
+						style="@style/Main.ToolGroup.Bar.Item.Label"
+						android:layout_width="wrap_content"
+						android:layout_height="@dimen/toolpage_bar_H" />
+				
+				</LinearLayout>
+				
+				<Spinner
+					android:id="@+id/sp_toolpage_toolbar_tabs"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:visibility="gone"
+					tools:visibility="visible"
+					android:background="@drawable/main_appbar_rectangle_selector"
+					android:popupBackground="?attr/main_appbar_background_color" />
+				
+				<ImageView
+					android:id="@+id/iv_toolpage_toolbar_newtab"
+					android:layout_width="@dimen/toolpage_bar_H"
+					android:layout_height="@dimen/toolpage_bar_H"
+					android:visibility="gone"
+					tools:visibility="visible"
+					android:background="@drawable/main_appbar_rectangle_selector"
+					style="@style/Main.ToolGroup.Bar.Item.Icon"
+					app:srcCompat="@drawable/toolpage_tab_item_add" />
+			
+			</LinearLayout>
+			
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/rv_toolpage_toolbar_menu"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:foregroundGravity="bottom" />
+			
+			<ImageView
+				android:id="@+id/iv_toolpage_toolbar_menu_max"
+				android:layout_width="@dimen/toolpage_bar_H"
+				android:layout_height="@dimen/toolpage_bar_H"
+				android:background="@drawable/main_appbar_rectangle_selector"
+				style="@style/Main.ToolGroup.Bar.Item.Icon"
+				app:srcCompat="@drawable/toolpage_menu_max_up" />
+			
+			<ImageView
+				android:id="@+id/iv_toolpage_toolbar_menu_close"
+				android:layout_width="@dimen/toolpage_bar_H_more"
+				android:layout_height="@dimen/toolpage_bar_H"
+				android:background="@drawable/main_appbar_rectangle_selector"
+				style="@style/Main.ToolGroup.Bar.Item.Icon"
+				app:srcCompat="@drawable/toolpage_menu_close" />
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+	
+	<taokdao.main.business.window.window_toolpage.popup.view.TabToolViewPager
+		android:id="@+id/vp_toolpage_container"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:background="?attr/main_content_background_color"
+		android:fillViewport="true"
+		android:overScrollMode="ifContentScrolls"
+		app:layout_constraintBottom_toTopOf="@id/tab_layout_toolpage"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="1.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/nsc_toolpage_toolbar"
+		app:layout_constraintVertical_bias="1.0" />
+	
+	<com.google.android.material.tabs.TabLayout
+		android:id="@+id/tab_layout_toolpage"
+		android:layout_width="0dp"
+		android:layout_height="@dimen/toolpage_bar_tab_H"
+		android:background="?attr/main_bottom_background_color"
+		android:elevation="2dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:tabBackground="?attr/main_bottom_background_color"
+		app:tabGravity="start"
+		app:tabIndicatorAnimationDuration="400"
+		app:tabIndicatorColor="?attr/main_bottom_background_color_hint"
+		app:tabIndicatorGravity="top"
+		app:tabIndicatorHeight="@dimen/toolpage_bar_tab_H"
+		app:tabMode="scrollable"
+		app:tabRippleColor="?attr/main_bottom_background_color_accent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

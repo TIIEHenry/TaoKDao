@@ -1,0 +1,1 @@
+{"description":"html","extension":"html","group":"HTML","name":"HTML File","parameters":["Title"],"templateText":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>$Title</title>\n</head>\n<body>\n\n</body>\n</html>"}

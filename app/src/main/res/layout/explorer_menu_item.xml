@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/iv_icon"
+	style="@style/Main.Appbar.Image.Button.Round.ExplorerToolbar"
+	android:layout_width="@dimen/toolbar_menu_layout_H"
+	android:layout_height="@dimen/toolbar_menu_layout_H" />

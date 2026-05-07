@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="?attr/main_content_background_color">
+	
+	<ImageView
+		android:id="@+id/iv_info_icon"
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:scaleType="fitCenter"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:ignore="ContentDescription" />
+	
+	
+	<TextView
+		android:id="@+id/tv_description"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:layout_marginStart="10dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginEnd="10dp"
+		android:layout_marginBottom="10dp"
+		android:gravity="start"
+		android:textColor="?attr/main_content_foreground_color"
+		android:textSize="13sp"
+		android:typeface="monospace"
+		app:layout_constraintBottom_toBottomOf="@id/iv_info_icon"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@id/iv_info_icon"
+		app:layout_constraintTop_toTopOf="@id/iv_info_icon" />
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:paddingTop="15dp"
+		android:paddingBottom="15dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/iv_info_icon">
+		
+		<LinearLayout
+			android:id="@+id/ll_author"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/plugin_installdialog_item_H"
+			android:orientation="horizontal">
+			
+			<TextView
+				style="@style/Main_PluginInstaller_Dialog_TextButton"
+				android:layout_width="80dp"
+				android:layout_height="match_parent"
+				android:text="@string/business_plugin_install_dialog_item_author" />
+			
+			<TextView
+				android:id="@+id/tv_author"
+				style="@style/Main_PluginInstaller_Dialog_TextButton"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" />
+		</LinearLayout>
+		
+		<LinearLayout
+			android:id="@+id/ll_id"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/plugin_installdialog_item_H"
+			android:orientation="horizontal">
+			
+			<TextView
+				style="@style/Main_PluginInstaller_Dialog_TextButton"
+				android:layout_width="80dp"
+				android:layout_height="match_parent"
+				android:text="@string/business_plugin_install_dialog_item_id" />
+			
+			<TextView
+				android:id="@+id/tv_plugin_id"
+				style="@style/Main_PluginInstaller_Dialog_TextButton"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" />
+		</LinearLayout>
+		
+		<LinearLayout
+			android:id="@+id/ll_version"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/plugin_installdialog_item_H"
+			android:orientation="horizontal">
+			
+			<TextView
+				style="@style/Main_PluginInstaller_Dialog_TextButton"
+				android:layout_width="80dp"
+				android:layout_height="match_parent"
+				android:text="@string/business_plugin_install_dialog_item_version" />
+			
+			<TextView
+				android:id="@+id/tv_version"
+				style="@style/Main_PluginInstaller_Dialog_TextButton"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" />
+		</LinearLayout>
+		
+		<LinearLayout
+			android:id="@+id/ll_version_old"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/plugin_installdialog_item_H"
+			android:orientation="horizontal"
+			android:visibility="gone">
+			
+			<TextView
+				style="@style/Main_PluginInstaller_Dialog_TextButton"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:text="@string/business_plugin_install_dialog_item_installed" />
+			
+			<TextView
+				android:id="@+id/tv_version_old"
+				style="@style/Main_PluginInstaller_Dialog_TextButton"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" />
+		</LinearLayout>
+		
+		<LinearLayout
+			android:id="@+id/ll_readme"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/plugin_installdialog_item_H"
+			android:orientation="horizontal">
+			
+			<TextView
+				style="@style/Main_PluginInstaller_Dialog_TextButton"
+				android:layout_width="80dp"
+				android:layout_height="match_parent"
+				android:text="@string/business_plugin_install_dialog_item_readme" />
+			
+			<Button
+				android:id="@+id/btn_readme"
+				style="@style/Main_PluginInstaller_Dialog_TextButton"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="center"
+				android:text="@string/business_plugin_install_dialog_item_readme_review"
+				android:textColor="?attr/main_content_foreground_color" />
+		</LinearLayout>
+	</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

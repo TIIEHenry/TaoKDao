@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/main_content_rectangle_selector"
+    android:paddingStart="7dp"
+    android:paddingEnd="7dp">
+	
+	<TextView
+		android:id="@+id/tv_toolpages_logcat_item_process"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:alpha="0.6"
+		android:gravity="center_vertical"
+		android:padding="0dp"
+		android:textColor="?attr/main_content_foreground_color"
+		android:textSize="12sp"
+		android:typeface="monospace"
+		android:visibility="gone"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+	
+	<TextView
+		android:id="@+id/tv_toolpages_logcat_item_message"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:lines="1"
+		android:padding="0dp"
+		android:textColor="?attr/main_content_foreground_color"
+		android:textSize="14sp"
+		android:typeface="monospace"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/tv_toolpages_logcat_item_process" />
+</androidx.constraintlayout.widget.ConstraintLayout>

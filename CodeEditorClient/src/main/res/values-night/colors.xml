@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<color name="main_appbar_background_color_hint">#424242</color>
+	<color name="main_appbar_background_color">#2c2e2d</color>
+	<color name="main_appbar_background_color_accent">#202121</color>
+	<color name="main_appbar_foreground_color_hint">#bbbbbb</color>
+	<color name="main_appbar_foreground_color">#dddddd</color>
+	<color name="main_appbar_foreground_color_accent">#eeffffff</color>
+	
+	<color name="main_content_background_color_hint">#444444</color>
+	<color name="main_content_background_color">#343635</color>
+	<color name="main_content_background_color_accent">#202121</color>
+	<color name="main_content_foreground_color_hint">#aaaaaa</color>
+	<color name="main_content_foreground_color">#dddddd</color>
+	<color name="main_content_foreground_color_accent">#ffffff</color>
+	
+	<color name="main_float_background_color_hint">#33000000</color>
+	<color name="main_float_background_color">#44000000</color>
+	<color name="main_float_background_color_accent">#55000000</color>
+	<color name="main_float_foreground_color_hint">#dddddd</color>
+	<color name="main_float_foreground_color">#eeeeee</color>
+	<color name="main_float_foreground_color_accent">#ffffff</color>
+	
+	<color name="main_bottom_background_color_hint">#444444</color>
+	<color name="main_bottom_background_color">#343635</color>
+	<color name="main_bottom_background_color_accent">#202121</color>
+	<color name="main_bottom_foreground_color_hint">#bbbbbb</color>
+	<color name="main_bottom_foreground_color">#dddddd</color>
+	<color name="main_bottom_foreground_color_accent">#eeffffff</color>
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	
+	<EditText
+		android:id="@+id/et_file_name"
+		android:layout_width="0dp"
+		android:layout_height="40dp"
+		android:background="@drawable/main_content_rectangle_selected"
+		android:hint="File Name"
+		android:paddingHorizontal="10dp"
+		android:paddingVertical="3dp"
+		android:textColor="?attr/main_content_foreground_color"
+		android:textSize="15sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+	
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/file_template_choose_in_group_rv"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_marginTop="5dp"
+		android:textSize="13sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/et_file_name"
+		app:layout_constraintVertical_weight="1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

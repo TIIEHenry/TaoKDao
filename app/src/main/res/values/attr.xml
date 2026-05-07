@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<declare-styleable name="LogCat">
+		<attr name="main_bottom_log_v_color" format="color" />
+		<attr name="main_bottom_log_d_color" format="color" />
+		<attr name="main_bottom_log_i_color" format="color" />
+		<attr name="main_bottom_log_w_color" format="color" />
+		<attr name="main_bottom_log_e_color" format="color" />
+		<attr name="main_bottom_log_a_color" format="color" />
+	</declare-styleable>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<style name="Main.Appbar.Image.Button.Round" parent="Main.Appbar.Button.Round"></style>
+	
+	<style name="Main.Appbar.Image.Button.Rectangle" parent="Main.Appbar.Button.Rectangle"></style>
+	
+	<style name="Main.Appbar.Text.Button.Round" parent="Main.Appbar.Button.Round"></style>
+	
+	<style name="Main.Appbar.Text.Button.Rectangle" parent="Main.Appbar.Button.Rectangle"></style>
+	
+	<style name="Main.Appbar.Button.Round" parent="Main.Appbar.Clickable.Round"></style>
+	
+	<style name="Main.Appbar.Button.Rectangle" parent="Main.Appbar.Clickable.Rectangle"></style>
+	
+	<style name="Main.Appbar.Clickable.Round">
+		<item name="android:background">@drawable/main_appbar_round_selector</item>
+	</style>
+	
+	<style name="Main.Appbar.Clickable.Rectangle">
+		<item name="android:background">@drawable/main_appbar_rectangle_selector</item>
+	</style>
+	
+	
+	<style name="Main.Appbar.Text" parent="Widget.AppCompat.TextView">
+		<item name="android:textColor">?attr/main_appbar_foreground_color</item>
+		<item name="android:textColorHint">?attr/main_appbar_foreground_color_hint</item>
+		<item name="android:textColorHighlight">?attr/main_appbar_foreground_color_accent</item>
+	</style>
+	
+	<style name="Main.Appbar.Image">
+		<item name="android:scaleType">fitCenter</item>
+	</style>
+	
+	<style name="Main.Appbar.Clickable" parent="Clickable"></style>
+	
+	<style name="Main.Appbar"></style>
+
+</resources>

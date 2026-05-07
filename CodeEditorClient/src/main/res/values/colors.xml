@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="main_appbar_background_color_hint">@color/blueGrey_400</color>
+	<color name="main_appbar_background_color">@color/blueGrey_500</color>
+	<color name="main_appbar_background_color_accent">@color/blueGrey_600</color>
+	<color name="main_appbar_foreground_color_hint">@color/grey_400</color>
+	<color name="main_appbar_foreground_color">@color/grey_100</color>
+	<color name="main_appbar_foreground_color_accent">@color/grey_1100</color>
+	
+	<color name="main_content_background_color_hint">@color/grey_200</color>
+	<color name="main_content_background_color">@color/grey_1100</color>
+	<color name="main_content_background_color_accent">@color/grey_400</color>
+	<color name="main_content_foreground_color_hint">@color/grey_600</color>
+	<color name="main_content_foreground_color">@color/grey_900</color>
+	<color name="main_content_foreground_color_accent">@color/grey_1000</color>
+	
+	<color name="main_float_background_color_hint">#33000000</color>
+	<color name="main_float_background_color">#44000000</color>
+	<color name="main_float_background_color_accent">#66000000</color>
+	<color name="main_float_foreground_color_hint">#dddddd</color>
+	<color name="main_float_foreground_color">#eeeeee</color>
+	<color name="main_float_foreground_color_accent">#ffffff</color>
+	
+	<color name="main_bottom_background_color_hint">@color/grey_300</color>
+	<color name="main_bottom_background_color">@color/grey_50</color>
+	<color name="main_bottom_background_color_accent">@color/grey_500</color>
+	<color name="main_bottom_foreground_color_hint">#303030</color>
+	<color name="main_bottom_foreground_color">#333333</color>
+	<color name="main_bottom_foreground_color_accent">#222222</color>
+
+</resources>

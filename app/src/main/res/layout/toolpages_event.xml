@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="?attr/main_content_background_color"
+	android:paddingStart="1dp"
+	android:paddingEnd="1dp">
+	
+	<HorizontalScrollView
+		android:id="@+id/hsv_toolpages_event"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+		
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/rv_toolpages_event"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="?attr/main_content_background_color" />
+	</HorizontalScrollView>
+	
+	<include
+		android:id="@+id/toolpage_public_zoom_controls"
+		layout="@layout/toolpage_public_zoom_controls"
+		android:layout_width="wrap_content"
+		android:layout_height="@dimen/toolpage_public_zoom_controls_H"
+		android:layout_margin="@dimen/toolpage_public_zoom_controls_H"
+		app:layout_constraintBottom_toBottomOf="@id/hsv_toolpages_event"
+		app:layout_constraintEnd_toEndOf="@id/hsv_toolpages_event" />
+</androidx.constraintlayout.widget.ConstraintLayout>

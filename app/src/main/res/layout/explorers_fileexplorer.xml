@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	
+	<EditText
+		android:id="@+id/et_file_filter"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/toolbar_menu_layout_H"
+		android:background="@drawable/main_content_rectangle_selector"
+		android:hint="File Filter"
+		android:paddingStart="15dp"
+		android:paddingEnd="15dp"
+		android:singleLine="true"
+		android:textColor="?attr/main_content_foreground_color"
+		android:textColorHint="?attr/main_content_foreground_color_hint" />
+	
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/rv_content"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+</LinearLayout>

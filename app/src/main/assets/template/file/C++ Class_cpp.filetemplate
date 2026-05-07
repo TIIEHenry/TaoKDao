@@ -1,0 +1,1 @@
+{"description":"c++ class","extension":"cpp","group":"C++","name":"C++ Class","parameters":["INCLUDE_GUARD","NAMESPACES_OPEN","NAMESPACES_CLOSE"],"templateText":"#[[#ifndef]]# ${INCLUDE_GUARD}\n#[[#define]]# ${INCLUDE_GUARD}\n\n${NAMESPACES_OPEN}\n\nclass ${NAME} {\n\n};\n\n${NAMESPACES_CLOSE}\n\n#[[#endif]]# //${INCLUDE_GUARD}"}

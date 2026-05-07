@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<style name="et_file_template_params_input" parent="Widget.AppCompat.EditText">
+		<item name="android:layout_height">36dp</item>
+		<item name="android:layout_margin">1dp</item>
+		<item name="android:padding">3dp</item>
+		<item name="android:background">@drawable/main_content_rectangle_selected</item>
+	</style>
+</resources>

@@ -1,0 +1,1 @@
+{"description":"Kotlin Interface","extension":"kt","group":"Kotlin","name":"Interface","parameters":["PACKAGE_NAME","NAME"],"templateText":"#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != \"\")package ${PACKAGE_NAME}\r\n\r\n#end\r\ninterface ${NAME} {\r\n}"}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	
+	
+	<taokdao.codeeditor.CodeIEditor
+		android:id="@+id/code_ieditor_editor"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:background="?attr/main_content_background_color"
+		app:layout_constraintBottom_toTopOf="@+id/quick_input_layout"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+	
+	
+	<ImageButton
+		android:id="@+id/quick_edit_float_ibtn"
+		android:layout_width="@dimen/quick_edit_float_W"
+		android:layout_height="@dimen/quick_edit_float_H"
+		android:layout_marginBottom="10dp"
+		android:background="@drawable/codeeditor_quickedit_float_selector"
+		android:elevation="2dp"
+		android:paddingVertical="@dimen/quick_edit_float_padding_other"
+		android:paddingStart="@dimen/quick_edit_float_padding_start"
+		android:paddingEnd="@dimen/quick_edit_float_padding_other"
+		android:scaleType="fitCenter"
+		app:layout_constraintBottom_toTopOf="@+id/select_operate_layout"
+		app:layout_constraintStart_toStartOf="parent"
+		app:srcCompat="@drawable/codeeditor_quickedit_edit" />
+	
+	
+	<ImageView
+		android:id="@+id/quick_control_left"
+		android:layout_width="@dimen/quick_control_btn_W"
+		android:layout_height="@dimen/quick_control_btn_H"
+		android:layout_marginBottom="17dp"
+		android:background="@drawable/codeeditor_quickcontrol_left_selector"
+		android:elevation="2dp"
+		android:paddingVertical="@dimen/quick_edit_float_padding_other"
+		android:paddingStart="@dimen/quick_edit_float_padding_start"
+		android:paddingEnd="@dimen/quick_edit_float_padding_other"
+		android:scaleType="fitCenter"
+		app:layout_constraintBottom_toTopOf="@id/select_operate_layout"
+		app:layout_constraintEnd_toStartOf="@id/quick_control_right"
+		app:srcCompat="@drawable/codeeditor_quickcontrol_undo" />
+	
+	<ImageView
+		android:id="@+id/quick_control_right"
+		android:layout_width="@dimen/quick_control_btn_W"
+		android:layout_height="@dimen/quick_control_btn_H"
+		android:layout_marginEnd="17dp"
+		android:layout_marginBottom="17dp"
+		android:background="@drawable/codeeditor_quickcontrol_right_selector"
+		android:elevation="2dp"
+		android:paddingVertical="@dimen/quick_edit_float_padding_other"
+		android:paddingStart="@dimen/quick_edit_float_padding_other"
+		android:paddingEnd="@dimen/quick_edit_float_padding_start"
+		android:scaleType="fitCenter"
+		app:layout_constraintBottom_toTopOf="@id/select_operate_layout"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:srcCompat="@drawable/codeeditor_quickcontrol_redo" />
+	
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/select_operate_layout"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:background="?attr/main_float_background_color"
+		android:elevation="2dp"
+		android:visibility="gone"
+		app:layout_constraintBottom_toTopOf="@id/quick_input_layout"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="parent"
+		tools:visibility="visible" />
+
+
+	<include layout="@layout/quick_input_layout" />
+
+
+	<include layout="@layout/find_layout" />
+
+	<include layout="@layout/replace_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

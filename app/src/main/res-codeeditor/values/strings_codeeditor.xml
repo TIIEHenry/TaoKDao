@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="codeeditor_setting_block">Block</string>
+    <string name="codeeditor_setting_block_highlightblockline">Highlight Block Line</string>
+    <string name="codeeditor_setting_block_showblockline">Show Block Line</string>
+    <string name="codeeditor_setting_compatibilitymode">Compatibility Mode</string>
+    <string name="codeeditor_setting_compatibilitymode_description">compatibility mode for ime</string>
+    <string name="codeeditor_setting_customfont">Custom Font</string>
+    <string name="codeeditor_setting_display">Display</string>
+    <string name="codeeditor_setting_edit">Edit</string>
+    <string name="codeeditor_setting_encode">Encode</string>
+    <string name="codeeditor_setting_encode_autodetect">Auto Detect</string>
+    <string name="codeeditor_setting_encode_converttoencode">Convert To Encode</string>
+    <string name="codeeditor_setting_encode_defaultreadencode">Default Read Encode</string>
+    <string name="codeeditor_setting_encode_defaultwriteencode">Default Write Encode</string>
+    <string name="codeeditor_setting_encode_keepreadencode">Keep Readed Encode</string>
+    <string name="codeeditor_setting_encode_reloadwithencode">Reload With Encode</string>
+    <string name="codeeditor_setting_font">Font</string>
+    <string name="codeeditor_setting_fontpath">Font Path</string>
+    <string name="codeeditor_setting_fontsize">Font Size</string>
+    <string name="codeeditor_setting_highlightrow">Highlight Row</string>
+    <string name="codeeditor_setting_indentnumber">Indent Number</string>
+    <string name="codeeditor_setting_indentnumber_des">number of space or tab</string>
+    <string name="codeeditor_setting_navigate">Navigate</string>
+    <string name="codeeditor_setting_showlinenumber">Show Line Number</string>
+    <string name="codeeditor_setting_showmagnifier">Show Magnifier</string>
+    <string name="codeeditor_setting_showmagnifier_des">Android P+ Supported</string>
+    <string name="codeeditor_setting_shownonprinting">Show NonPrinting</string>
+    <string name="codeeditor_setting_tabwidth">Tab Width</string>
+    <string name="codeeditor_setting_tabwidth_des">space width as a unit</string>
+    <string name="codeeditor_setting_usetab">Use Tab</string>
+    <string name="codeeditor_setting_wordwrap">Word Wrap</string>
+
+    <string name="contents_codeeditor_description">Code editor for TaoKDao</string>
+    <string name="contents_codeeditor_findreplace_find_text">Search text</string>
+    <string name="contents_codeeditor_findreplace_matchcase">Match case sensitivity :</string>
+    <string name="contents_codeeditor_findreplace_matchregex">Match using regularization :</string>
+    <string name="contents_codeeditor_findreplace_notfound">Not found, find next</string>
+    <string name="contents_codeeditor_findreplace_replace">Replace</string>
+    <string name="contents_codeeditor_findreplace_replace_all">Replace all</string>
+    <string name="contents_codeeditor_findreplace_replace_text">Replace text</string>
+    <string name="contents_codeeditor_label">CodeEditor</string>
+    <string name="contents_codeeditor_quickmenu_copyline">Copy Line</string>
+    <string name="contents_codeeditor_quickmenu_cutline">Cut Line</string>
+    <string name="contents_codeeditor_quickmenu_deleteline">Delete Line</string>
+    <string name="contents_codeeditor_quickmenu_gotoline">Goto Line</string>
+    <string name="contents_codeeditor_quickmenu_gotoline_dialog_hint">Please input line number!</string>
+    <string name="contents_codeeditor_quickmenu_gotoline_failed_beyondrange">"Operation failed: Input beyond range! "</string>
+    <string name="contents_codeeditor_quickmenu_gotoline_failed_inputerror">"Operation failed: Input error! "</string>
+    <string name="contents_codeeditor_quickmenu_indentline">Indent Line</string>
+    <string name="contents_codeeditor_quickmenu_noteline">Note Line</string>
+    <string name="contents_codeeditor_quickmenu_selectline">Select Line</string>
+    <string name="view_tag" translatable="false">code_editor</string>
+
+</resources>

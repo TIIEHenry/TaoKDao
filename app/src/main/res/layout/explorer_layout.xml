@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="300dp"
+	android:layout_height="match_parent"
+	android:background="?attr/main_content_background_color">
+	
+	<View
+		android:id="@+id/v_explorer_statusbar"
+		android:layout_width="match_parent"
+		android:layout_height="30dp"
+		android:background="?attr/main_appbar_background_color"
+		android:elevation="3dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+	
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/explorer_toolbar_cl"
+		android:layout_width="0dp"
+		android:layout_height="@dimen/toolbar_menu_layout_H"
+		android:background="?attr/main_content_background_color"
+		android:elevation="3dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/v_explorer_statusbar">
+		
+		<androidx.appcompat.widget.AppCompatSpinner
+			android:id="@+id/explorer_toolbar_spinner"
+			android:layout_width="wrap_content"
+			android:layout_height="0dp"
+			android:background="?attr/main_appbar_background_color"
+			android:dropDownSelector="@drawable/main_appbar_rectangle_selector"
+			android:popupBackground="?attr/main_appbar_background_color"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toStartOf="@id/explorer_toolbar_spinner"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+		
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/explorer_toolbar_menu_rv"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toStartOf="@id/explorer_toolbar_menu_more_iv"
+			app:layout_constraintStart_toEndOf="@id/explorer_toolbar_spinner"
+			app:layout_constraintTop_toTopOf="parent" />
+		
+		<ImageView
+			android:id="@+id/explorer_toolbar_menu_more_iv"
+			style="@style/Main.Appbar.Image.Button.Round.ExplorerToolbar"
+			android:layout_width="@dimen/toolbar_menu_layout_H"
+			android:layout_height="0dp"
+			android:visibility="gone"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:srcCompat="@drawable/explorer_menu_moremenu"
+			tools:visibility="visible" />
+	</androidx.constraintlayout.widget.ConstraintLayout>
+	
+	
+	<androidx.viewpager.widget.ViewPager
+		android:id="@+id/explorer_container_vp"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:background="?attr/main_content_background_color"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/explorer_toolbar_cl" />
+<!--	-->
+<!--	<androidx.appcompat.widget.AppCompatImageButton-->
+<!--		android:id="@+id/window_explorer_float_ibtn"-->
+<!--		android:layout_width="42dp"-->
+<!--		android:layout_height="42dp"-->
+<!--		android:layout_marginEnd="37dp"-->
+<!--		android:layout_marginBottom="37dp"-->
+<!--		android:background="@drawable/main_float_round_bg_selector"-->
+<!--		android:elevation="3dp"-->
+<!--		android:padding="8dp"-->
+<!--		android:scaleType="fitCenter"-->
+<!--		app:layout_constraintBottom_toBottomOf="@id/window_explorer_vp_container"-->
+<!--		app:layout_constraintEnd_toEndOf="parent"-->
+<!--		app:srcCompat="@drawable/main_explorer_float_ibtn" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

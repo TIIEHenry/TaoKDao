@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<style name="Main.Content.Image.Button.Round" parent="Main.Content.Button.Round"></style>
+	
+	<style name="Main.Content.Image.Button.Rectangle" parent="Main.Content.Button.Rectangle"></style>
+	
+	<style name="Main.Content.Text.Button.Round" parent="Main.Content.Button.Round"></style>
+	
+	<style name="Main.Content.Text.Button.Rectangle" parent="Main.Content.Button.Rectangle"></style>
+	
+	<style name="Main.Content.Button.Round" parent="Main.Content.Clickable.Round"></style>
+	
+	<style name="Main.Content.Button.Rectangle" parent="Main.Content.Clickable.Rectangle"></style>
+	
+	<style name="Main.Content.Clickable.Round">
+		<item name="android:background">@drawable/main_content_round_selector</item>
+	</style>
+	
+	<style name="Main.Content.Clickable.Rectangle">
+		<item name="android:background">@drawable/main_content_rectangle_selector</item>
+	</style>
+	
+	
+	<style name="Main.Content.Text" parent="Widget.AppCompat.TextView">
+		<item name="android:textColor">?attr/main_content_foreground_color</item>
+		<item name="android:textColorHint">?attr/main_content_foreground_color_hint</item>
+		<item name="android:textColorHighlight">?attr/main_content_foreground_color_accent</item>
+	</style>
+	
+	<style name="Main.Content.Image">
+		<item name="android:scaleType">fitCenter</item>
+	</style>
+	
+	<style name="Main.Content.Clickable" parent="Clickable"></style>
+	
+	<style name="Main.Content"></style>
+
+
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/quick_input_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/quick_input_layout_H"
+    android:background="?attr/main_bottom_background_color"
+    android:elevation="2dp"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toTopOf="@+id/find_layout"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:showIn="@layout/contents_codeeditor">
+
+    <ImageView
+        android:id="@+id/quick_input_ibtn_indent"
+        android:layout_width="@dimen/quick_input_layout_H"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bottom_rectangle_selector"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/codeeditor_quickinput_indent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/quick_input_rv"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/quick_input_ibtn_tabtool"
+        android:layout_width="@dimen/quick_input_layout_H"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bottom_rectangle_selector"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/codeeditor_quickinput_tabtool" />
+</LinearLayout>

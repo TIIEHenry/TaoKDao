@@ -1,0 +1,12 @@
+# Gradle files
+build/
+.gradle/
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+/apks/debug/output.json
+/apks/release/output.json
+/apks/

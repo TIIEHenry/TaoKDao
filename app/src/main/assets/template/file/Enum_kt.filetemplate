@@ -1,0 +1,1 @@
+{"description":"Kotlin Enum","extension":"kt","group":"Kotlin","name":"Enum","parameters":["PACKAGE_NAME","NAME"],"templateText":"#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != \"\")package ${PACKAGE_NAME}\r\n\r\n#end\r\nenum class ${NAME} {\r\n}"}

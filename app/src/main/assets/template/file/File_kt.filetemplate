@@ -1,0 +1,1 @@
+{"description":"Kotlin File","extension":"kt","group":"Kotlin","name":"File","parameters":["PACKAGE_NAME"],"templateText":"#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != \"\")package ${PACKAGE_NAME}\r\n\r\n#end"}

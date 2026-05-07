@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="codeeditor_setting_block">区块</string>
+    <string name="codeeditor_setting_block_highlightblockline">高亮区块线</string>
+    <string name="codeeditor_setting_block_showblockline">显示区块线</string>
+    <string name="codeeditor_setting_compatibilitymode">兼容模式</string>
+    <string name="codeeditor_setting_compatibilitymode_description">切换输入法兼容模式</string>
+    <string name="codeeditor_setting_customfont">自定义字体</string>
+    <string name="codeeditor_setting_edit">编辑</string>
+    <string name="codeeditor_setting_encode">编码</string>
+    <string name="codeeditor_setting_encode_autodetect">自动检测</string>
+    <string name="codeeditor_setting_encode_converttoencode">转换为指定编码</string>
+    <string name="codeeditor_setting_encode_defaultreadencode">读入编码</string>
+    <string name="codeeditor_setting_encode_defaultwriteencode">写出编码</string>
+    <string name="codeeditor_setting_encode_keepreadencode">保持读入的编码</string>
+    <string name="codeeditor_setting_encode_reloadwithencode">以指定编码重载</string>
+    <string name="codeeditor_setting_font">字体</string>
+    <string name="codeeditor_setting_fontpath">字体路径</string>
+    <string name="codeeditor_setting_fontsize">字体大小</string>
+    <string name="codeeditor_setting_highlightrow">高亮行</string>
+    <string name="codeeditor_setting_indentnumber">缩进数量</string>
+    <string name="codeeditor_setting_indentnumber_des">空格或制表符数量</string>
+    <string name="codeeditor_setting_navigate">导航</string>
+    <string name="codeeditor_setting_showlinenumber">显示行号</string>
+    <string name="codeeditor_setting_showmagnifier">显示放大镜</string>
+    <string name="codeeditor_setting_showmagnifier_des">安卓P以上支持</string>
+    <string name="codeeditor_setting_shownonprinting">显示空白字符</string>
+    <string name="codeeditor_setting_tabwidth">制表符宽度</string>
+    <string name="codeeditor_setting_tabwidth_des">以空格宽度为一个单位</string>
+    <string name="codeeditor_setting_usetab">使用制表符</string>
+    <string name="codeeditor_setting_wordwrap">自动换行</string>
+
+    <string name="contents_codeeditor_description">TaoKDao代码编辑器</string>
+    <string name="contents_codeeditor_findreplace_find_text">搜索内容</string>
+    <string name="contents_codeeditor_findreplace_matchcase">匹配区分大小写：</string>
+    <string name="contents_codeeditor_findreplace_matchregex">匹配使用正则：</string>
+    <string name="contents_codeeditor_findreplace_notfound">没有找到，寻找下一个</string>
+    <string name="contents_codeeditor_findreplace_replace">替换</string>
+    <string name="contents_codeeditor_findreplace_replace_all">替换全部</string>
+    <string name="contents_codeeditor_findreplace_replace_text">替换内容</string>
+    <string name="contents_codeeditor_label">代码编辑器</string>
+    <string name="contents_codeeditor_quickmenu_copyline">复制行</string>
+    <string name="contents_codeeditor_quickmenu_cutline">剪切行</string>
+    <string name="contents_codeeditor_quickmenu_deleteline">删除行</string>
+    <string name="contents_codeeditor_quickmenu_gotoline">转到行</string>
+    <string name="contents_codeeditor_quickmenu_gotoline_dialog_hint">请输入行号！</string>
+    <string name="contents_codeeditor_quickmenu_gotoline_failed_beyondrange">操作失败：输入超范围！</string>
+    <string name="contents_codeeditor_quickmenu_gotoline_failed_inputerror">操作失败：输入错误！</string>
+    <string name="contents_codeeditor_quickmenu_indentline">缩进行</string>
+    <string name="contents_codeeditor_quickmenu_noteline">注释行</string>
+    <string name="contents_codeeditor_quickmenu_selectline">选择行</string>
+
+</resources>

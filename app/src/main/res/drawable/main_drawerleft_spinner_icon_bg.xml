@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:bottom="5dp"
+		android:left="5dp"
+		android:right="5dp"
+		android:top="5dp">
+		<shape
+			android:shape="oval"
+			android:useLevel="false">
+			<size
+				android:width="@dimen/toolbar_menu_layout_H"
+				android:height="@dimen/toolbar_menu_layout_H" />
+			<solid android:color="?attr/main_appbar_background_color_accent" />
+		</shape>
+	</item>
+</layer-list>

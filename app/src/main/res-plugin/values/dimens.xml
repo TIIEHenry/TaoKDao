@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<dimen name="plugin_launcher_list_all_item_list_H">38dp</dimen>
+	<dimen name="plugin_launcher_list_all_item_gird_H">58dp</dimen>
+	<dimen name="plugin_launcher_list_all_item_W">72dp</dimen>
+	<dimen name="plugin_launcher_search_edit_H">38dp</dimen>
+	<dimen name="plugin_launcher_search_edit_bg_horizontal_radius">19dp</dimen>
+	<dimen name="plugin_launcher_search_edit_clear_H">24dp</dimen>
+	<dimen name="plugin_launcher_search_edit_clear_margin">7dp</dimen>
+	<dimen name="plugin_launcher_search_edit_search_H">22dp</dimen>
+	<dimen name="plugin_launcher_search_edit_search_margin">8dp</dimen>
+	<dimen name="plugin_launcher_search_edit_search_padding">40dp</dimen>
+	<dimen name="plugin_launcher_toolbar_imgv_padding">8dp</dimen>
+	<dimen name="plugin_launcher_flowtag_tag_H">30dp</dimen>
+	<dimen name="plugin_launcher_flowtag_tag_radius">14dp</dimen>
+	<dimen name="plugin_installdialog_item_H">38dp</dimen>
+
+</resources>

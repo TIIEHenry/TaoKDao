@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<application>
+		<activity
+			android:name="tiiehenry.android.dl.DLProxyActivity"
+			android:label="DLProxyActivity"
+			android:exported="true">
+			<intent-filter>
+				<action android:name="com.ryg.dynamicload.proxy.activity.VIEW" />
+				
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+	</application>
+</manifest>

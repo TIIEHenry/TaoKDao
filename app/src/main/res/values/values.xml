@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<style name="ActivitySplash" parent="AppTheme">
+		<item name="windowActionModeOverlay">true</item>
+		<item name="android:windowActionModeOverlay">true</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:statusBarColor">@color/splash_background</item>
+		<item name="colorPrimary">@color/splash_background</item>
+		<item name="colorPrimaryDark">@color/splash_background</item>
+		<item name="android:windowBackground">@drawable/app_splash</item>
+	</style>
+	<declare-styleable name="FlowTagLayout">
+		<!--选择模式，默认不可选-->
+		<attr format="enum" name="ftl_check_mode">
+			<!--不可选择-->
+			<enum name="none" value="0"/>
+			<!--单选-->
+			<enum name="single" value="1"/>
+			<!--多选-->
+			<enum name="multi" value="2"/>
+			<!--只是展示-->
+			<enum name="display" value="3"/>
+		</attr>
+		<!-- 流标签的可选项  -->
+		<attr format="reference" name="ftl_entries"/>
+		<!-- 流标签默认的已选项索引  -->
+		<attr format="reference" name="ftl_selecteds"/>
+		<!-- 单选模式下选中是否可取消，默认是false  -->
+		<attr format="boolean" name="ftl_single_cancelable"/>
+	</declare-styleable>
+</resources>

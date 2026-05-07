@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="?attr/main_content_background_color"
+	android:padding="5dp">
+	
+	<LinearLayout
+		android:id="@+id/ll_search"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/plugin_launcher_search_edit_H"
+		android:orientation="horizontal"
+		app:layout_constraintTop_toTopOf="parent">
+		
+		<ImageButton
+			android:id="@+id/ibtn_manage"
+			android:layout_width="@dimen/plugin_launcher_search_edit_H"
+			android:layout_height="@dimen/plugin_launcher_search_edit_H"
+			android:layout_marginStart="2dp"
+			android:background="@drawable/main_content_round_selector"
+			android:padding="@dimen/plugin_launcher_toolbar_imgv_padding"
+			android:scaleType="fitCenter"
+			android:src="@drawable/plugin_manage_launcher_pluginitem_manage3" />
+		
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="0dp"
+			android:layout_height="@dimen/plugin_launcher_search_edit_H"
+			android:layout_weight="1">
+			
+			<EditText
+				android:id="@+id/et_search"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/plugin_launcher_search_edit_H"
+				android:layout_margin="4dp"
+				android:background="@drawable/plugin_manage_launcher_search_bg_selector"
+				android:hint="@string/plugin_manage_launcher_search_hint"
+				android:inputType="textWebEditText"
+				android:padding="2dp"
+				android:paddingStart="@dimen/plugin_launcher_search_edit_search_padding"
+				android:paddingEnd="@dimen/plugin_launcher_search_edit_search_padding"
+				android:textColor="?attr/main_content_foreground_color"
+				android:textColorHint="?attr/main_content_foreground_color_hint"
+				android:textSize="16sp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+			
+			<ImageView
+				android:id="@+id/iv_search"
+				android:layout_width="@dimen/plugin_launcher_search_edit_search_H"
+				android:layout_height="@dimen/plugin_launcher_search_edit_search_H"
+				android:layout_margin="@dimen/plugin_launcher_search_edit_search_margin"
+				android:padding="2dp"
+				android:scaleType="fitCenter"
+				android:src="@drawable/plugin_manage_launcher_search_search2"
+				app:layout_constraintBottom_toBottomOf="@id/et_search"
+				app:layout_constraintStart_toStartOf="@id/et_search"
+				app:layout_constraintTop_toTopOf="@id/et_search" />
+			
+			
+			<ImageView
+				android:id="@+id/iv_clear"
+				android:layout_width="@dimen/plugin_launcher_search_edit_clear_H"
+				android:layout_height="@dimen/plugin_launcher_search_edit_clear_H"
+				android:layout_margin="@dimen/plugin_launcher_search_edit_clear_margin"
+				android:background="@drawable/plugin_manage_launcher_search_clear_selector"
+				android:padding="2dp"
+				android:scaleType="fitCenter"
+				android:visibility="gone"
+				app:layout_constraintBottom_toBottomOf="@id/et_search"
+				app:layout_constraintEnd_toEndOf="@id/et_search"
+				app:layout_constraintTop_toTopOf="@id/et_search"
+				tools:visibility="visible" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+		
+		<ImageButton
+			android:id="@+id/iv_refresh"
+			android:layout_width="@dimen/plugin_launcher_search_edit_H"
+			android:layout_height="@dimen/plugin_launcher_search_edit_H"
+			android:layout_marginStart="2dp"
+			android:background="@drawable/main_content_round_selector"
+			android:padding="@dimen/plugin_launcher_toolbar_imgv_padding"
+			android:scaleType="fitCenter"
+			android:src="@drawable/plugin_manage_launcher_imgbtn_refresh2" />
+		
+		<ImageButton
+			android:id="@+id/iv_setting"
+			android:layout_width="@dimen/plugin_launcher_search_edit_H"
+			android:layout_height="@dimen/plugin_launcher_search_edit_H"
+			android:layout_marginStart="2dp"
+			android:background="@drawable/main_content_round_selector"
+			android:padding="@dimen/plugin_launcher_toolbar_imgv_padding"
+			android:scaleType="fitCenter"
+			android:src="@drawable/plugin_manage_launcher_imgbtn_manage" />
+	
+	</LinearLayout>
+	
+	
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/rv_all"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="4dp"
+		android:background="?attr/main_content_background_color"
+		android:overScrollMode="never"
+		app:layout_constraintBottom_toTopOf="@id/ftl_tags"
+		app:layout_constraintTop_toBottomOf="@id/ll_search" />
+	
+	<taokdao.main.business.plugin.plugin_manage.launcher.flowtag.FlowTagLayout
+		android:id="@+id/ftl_tags"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:maxHeight="200dp"
+		android:padding="4dp"
+		app:ftl_check_mode="multi"
+		app:layout_constraintBottom_toBottomOf="parent"
+		tools:layout_height="140dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

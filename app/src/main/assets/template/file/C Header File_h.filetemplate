@@ -1,0 +1,1 @@
+{"description":"c header file","extension":"h","group":"C++","name":"C Header File","parameters":["INCLUDE_GUARD"],"templateText":"#[[#ifndef]]# ${INCLUDE_GUARD}\n#[[#define]]# ${INCLUDE_GUARD}\n\n#[[#endif]]# //${INCLUDE_GUARD}\n"}
