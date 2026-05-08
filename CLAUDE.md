@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-TaoKDao is an Android IDE/editor platform (similar to VSCode/IntelliJ) with a plugin system, multi-language code editor, project builder, and dynamic loader. It is built as a multi-module Gradle project with a composite build dependency on `../TaoKDao-API`.
+TaoKDao is an Android IDE/editor platform (similar to VSCode/IntelliJ) with a plugin system, multi-language code editor, project builder, and dynamic loader. It is built as a multi-module Gradle project with a composite build dependency on `TaoKDao-API`.
 
 ## Build System
 
@@ -106,7 +106,7 @@ Notable dependencies outside the standard AndroidX stack:
 | Content / Guider | `app/src/main/java/taokdao/content/` |
 | Plugin API consumption | `app/src/main/java/taokdao/plugin/` |
 | Window / Explorer | `app/src/main/java/taokdao/window/` |
-| API interfaces (external) | `../TaoKDao-API/` (composite build) |
+| API interfaces (external) | `TaoKDao-API/` (composite build) |
 
 ## Lint & ProGuard
 
