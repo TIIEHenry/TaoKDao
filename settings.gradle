@@ -44,7 +44,10 @@ include ':app',
 //        ":lib-google-java-format",
         ':DynamicLoader',
         ':CodeEditor',
-        ':CodeEditorAntlr'
+        ':CodeEditorAntlr',
+        ':encodedetector',
+        ':encodehelper',
+        ':filej'
 //include        ':CodeEditorClient'
 //        ':CodeEditorAntlr-smali',
 //        ':markwon-editor',
@@ -52,7 +55,7 @@ include ':app',
 //        ':MarkDownViewer-release'
 
 includeBuild 'TaoKDao-API'
-//includeBuild '../Android-Dialogs-Interface'
+includeBuild 'Android-Dialogs-Interface'
 //includeBuild '../../DynamicLoader'
 //includeBuild '../../MarkDownViewer'
 //includeBuild '../../Nota-Toolkit/Nota-Toolkit'
