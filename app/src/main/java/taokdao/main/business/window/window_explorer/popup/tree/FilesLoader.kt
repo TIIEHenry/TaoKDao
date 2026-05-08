@@ -12,7 +12,7 @@ fun addProjectFilesDirNode(parent: TreeNode<LayoutItemType>, dir: File) {
         var dirFileList = dirFiles.toList()
         if (dirFiles.size > 1)
             dirFileList = dirFileList.sortedBy {
-                it.name.toLowerCase(Locale.getDefault())
+                it.name.lowercase(Locale.getDefault())
             }.sortedBy {
                 it.isFile
             }

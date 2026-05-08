@@ -86,7 +86,7 @@ class LogItemAdapter(val main: IMainView) : BaseIdRecyclerAdapter<LogLine>() {
         val s = "$tTag ${logLine.logOutput}"
         val spannableString = SpannableString(s)
         val foregroundColorSpan =
-            ForegroundColorSpan(main.getAttrColor(R.attr.main_content_foreground_color_hint))
+            ForegroundColorSpan(main.getAttrColor(ideditor.api.skin.R.attr.main_content_foreground_color_hint))
         spannableString.setSpan(
             foregroundColorSpan,
             0,

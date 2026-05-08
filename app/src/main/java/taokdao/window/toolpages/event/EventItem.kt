@@ -37,7 +37,7 @@ class EventItem(val time: Date, val tag: String, val message: String) {
                 val t_tag = "$t  $tag  "
                 val s = "$t_tag $message"
                 val spannableString = SpannableString(s)
-                val foregroundColorSpan = ForegroundColorSpan(main.getAttrColor(R.attr.main_content_foreground_color_hint))
+                val foregroundColorSpan = ForegroundColorSpan(main.getAttrColor(ideditor.api.skin.R.attr.main_content_foreground_color_hint))
                 spannableString.setSpan(foregroundColorSpan, t.length, t_tag.length, Spannable.SPAN_INCLUSIVE_INCLUSIVE)
 
                 str = spannableString

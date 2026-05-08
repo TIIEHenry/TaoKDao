@@ -15,7 +15,8 @@ interface ProjectTemplateView : ProjectTemplateContract.V {
     override fun addDefaultProjectTemplate() {
         val drawable = getDrawable(R.drawable.ic_file_any)
         val template = object : IProjectTemplate {
-            override val prop: IPanelProp=PanelProp("fileTemplate", context, R.string.business_project_templates_filetemplate_label, R.string.business_project_templates_filetemplate_description)
+            override val prop: IPanelProp=PanelProp(context, R.string.business_project_templates_filetemplate_label, null)
+            override fun id(): String = "fileTemplate"
             override fun generate(dir: File) {
                 fileTemplateGenerator.showChooseDialog(dir)
             }

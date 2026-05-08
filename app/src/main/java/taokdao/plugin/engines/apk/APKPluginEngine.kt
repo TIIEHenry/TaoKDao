@@ -1,6 +1,7 @@
 package taokdao.plugin.engines.apk
 
 import android.content.pm.PackageManager
+import android.graphics.drawable.Drawable
 import androidx.appcompat.view.ContextThemeWrapper
 import dalvik.system.DexClassLoader
 import taokdao.api.data.bean.Properties
@@ -20,6 +21,8 @@ import java.io.IOException
 
 class APKPluginEngine(val main: IMainContext)
     : PluginEngine(Properties(InnerIdentifier.PluginEngine.APK, "APK")) {
+
+    override val icon: Drawable? get() = null
     private val pluginManager = DLPluginManager.getInstance(main.context)
     private val apkPluginWorkDir = File(main.fileSystem.internalWorkDir, "plugin/apk").apply { mkdirs() }
 
@@ -67,6 +70,7 @@ class APKPluginEngine(val main: IMainContext)
                 PluginActions.onCall -> callOnCall(plugin)
                 PluginActions.onPause -> callOnPause(plugin)
                 PluginActions.onResume -> callOnResume(plugin)
+                PluginActions.onInvoke -> callOnInvoke(plugin)
             }
         } catch (e: Throwable) {
             e.printStackTrace()
@@ -108,6 +112,10 @@ class APKPluginEngine(val main: IMainContext)
 
     private fun callOnResume(plugin: Plugin) {
         getPluginModuleEnv(plugin)?.onResume(main, plugin.manifest)
+    }
+
+    private fun callOnInvoke(plugin: Plugin) {
+        // onInvoke is handled via invokePlugin method
     }
 
 

@@ -51,7 +51,7 @@ include ':app',
 //        ':dx',
 //        ':MarkDownViewer-release'
 
-includeBuild '../TaoKDao-API'
+includeBuild 'TaoKDao-API'
 //includeBuild '../Android-Dialogs-Interface'
 //includeBuild '../../DynamicLoader'
 //includeBuild '../../MarkDownViewer'

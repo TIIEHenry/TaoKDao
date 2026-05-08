@@ -21,7 +21,9 @@ import tiiehenry.ideditor.databinding.ToolpagesEventBinding
 
 
 class EventToolPageFragment(val main: IMainContext) : ToolPageBindingFragment<ToolpagesEventBinding>(
-    PanelProp(InnerIdentifier.ToolGroup.EVENT, main.context, R.string.toolpages_event_label,R.drawable.toolpages_event_icon)) {
+    PanelProp(main.context, R.string.toolpages_event_label, R.drawable.toolpages_event_icon)) {
+
+    override fun id() = InnerIdentifier.ToolGroup.EVENT
     init {
         menuList.add(ToolPageMenu(main.getDrawable(R.drawable.toolpage_public_menu_clear), main.getString(R.string.toolpages_event_menu_clear), View.OnClickListener {
             clearEvent()

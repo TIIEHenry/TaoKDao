@@ -31,7 +31,7 @@ object FileExplorerLoader {
 
         }
         list.sortBy {
-            it.label.toUpperCase(Locale.getDefault())
+            it.label.uppercase(Locale.getDefault())
         }
         list.sortBy {
             it.file.isFile

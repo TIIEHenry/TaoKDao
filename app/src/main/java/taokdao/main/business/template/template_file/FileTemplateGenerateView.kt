@@ -17,8 +17,8 @@ import java.util.Locale
 interface FileTemplateGenerateView : FileTemplateGenerateContract.V {
 
     private fun sortFileTemplateList(list: MutableList<FileTemplate>) {
-        list.sortBy { it.name.toLowerCase(Locale.getDefault()) }
-        list.sortBy { it.extension.toLowerCase(Locale.getDefault()) }
+        list.sortBy { it.name.lowercase(Locale.getDefault()) }
+        list.sortBy { it.extension.lowercase(Locale.getDefault()) }
     }
 
     override fun showFileTemplateChooseDialog(fileTemplateMap: Map<String, List<FileTemplate>>, dir: File): IDialog {

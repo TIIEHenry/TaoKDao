@@ -27,10 +27,12 @@ import java.util.Locale
 
 class LogcatToolPageFragment(val main: IMainView) : ToolPageBindingFragment<ToolpagesLogcatBinding>(
     PanelProp(
-        InnerIdentifier.ToolGroup.LOGCAT, main.context, R.string.toolpages_logcat_label,
+        main.context, R.string.toolpages_logcat_label,
         R.drawable.toolpages_logcat_icon
     )
 ) {
+
+    override fun id() = InnerIdentifier.ToolGroup.LOGCAT
 
     private var toggleStatePageMenu: ToolPageMenu
     private var toggleSuPageMenu: ToolPageMenu
@@ -101,7 +103,7 @@ class LogcatToolPageFragment(val main: IMainView) : ToolPageBindingFragment<Tool
         binding.tvToolpagesLogcatTag.apply {
             setOnClickListener {
                 val allTagsList = allTags.toMutableList().apply {
-                    sortBy { it.toUpperCase(Locale.getDefault()) }
+                    sortBy { it.uppercase(Locale.getDefault()) }
                 }
                 val items = allTagsList.map { it as CharSequence }
                 Dialogs.global

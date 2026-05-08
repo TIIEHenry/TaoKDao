@@ -142,7 +142,7 @@ class PluginLauncherLayout(val main: IMainView, private val wrapper: PluginManag
                 }.filter {
                     it.visibility.isVisible(main.contentManager.current?.id(), main.contentManager.current?.path)
                 }.filter {
-                    it.information.label.toLowerCase(Locale.getDefault()).contains(filterText.toLowerCase(Locale.getDefault()))
+                    it.information.label.lowercase(Locale.getDefault()).contains(filterText.lowercase(Locale.getDefault()))
                 }.filter {
                     if (inSearchMode) {
                         return@filter true

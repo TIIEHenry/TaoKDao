@@ -11,10 +11,12 @@ import tiiehenry.ideditor.databinding.ToolpagePublicTreeLayoutBinding
 class TipsToolGroupFragment(main: IMainView) :
     BaseTreeToolGroupFragment<ToolpagePublicTreeLayoutBinding>(
         main, PanelProp(
-            InnerIdentifier.ToolGroup.TIPS, main.context, R.string.tabfragment_tips,
+            main.context, R.string.tabfragment_tips,
             R.drawable.toolpages_tips_icon
         )
     ), ITipToolGroup {
+
+    override fun id() = InnerIdentifier.ToolGroup.TIPS
 
 
 //        tipsAdapter.setOnItemClickListener { _, data, _ ->

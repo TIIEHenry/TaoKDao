@@ -10,8 +10,10 @@ import tiiehenry.ideditor.R
 import tiiehenry.ideditor.databinding.ToolpagePublicTreeLayoutBinding
 
 class SearchToolPageFragment(main: IMainView) : BaseTreeToolGroupFragment<ToolpagePublicTreeLayoutBinding>(
-        main,PanelProp(InnerIdentifier.ToolGroup.SEARCH, main.context,R.string.tabfragment_search,
+        main, PanelProp(main.context, R.string.tabfragment_search,
         R.drawable.toolpages_search_icon)), ISearchToolGroup {
+
+    override fun id() = InnerIdentifier.ToolGroup.SEARCH
 
 //
 //        searchAdapter.setOnItemClickListener { _, data, _ ->

@@ -152,7 +152,7 @@ class FileExplorerFragment(val main: IMainView) : ExplorerFragment(
             if (dirFile.isDirectory) {
                 currentPath = dirFile.absolutePath
                 fileexploreradapter.refresh(FileExplorerLoader.getExplorerItemList(main, dirFile, filter))
-                binding.etFileFilter?.hint = "Filter ${dirFile.name}"
+                (view?.findViewById<android.widget.EditText>(R.id.et_file_filter))?.hint = "Filter ${dirFile.name}"
             }
         }
     }

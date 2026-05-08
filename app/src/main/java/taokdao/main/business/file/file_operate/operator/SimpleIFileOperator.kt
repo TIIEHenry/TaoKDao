@@ -6,13 +6,13 @@ import taokdao.api.file.operate.IFileOperator
 
 abstract class SimpleIFileOperator(val properties: Properties) : IFileOperator {
 
-    override fun getIcon(): Drawable? = null
-
     override fun id(): String = properties.id
 
-    override fun getLabel(): String = properties.label
+    override val icon: Drawable? get() = null
 
-    override fun getDescription(): String? = properties.description
+    override val label: String get() = properties.label
+
+    override val description: String? get() = properties.description
 
     override fun isSupport(path: String): Boolean {
         return true

@@ -17,7 +17,7 @@ abstract class AbstractTreeItemTreeBinder<T : LayoutItemType>(listener: TreeNode
         val hint = tipItem.hint ?: ""
         val textView = holder.getView<TextView>(R.id.tv_name)
         val s = "$title  $hint"
-        val foregroundColorSpan = ForegroundColorSpan(textView.context.getAttrColor(R.attr.main_content_foreground_color_hint))
+        val foregroundColorSpan = ForegroundColorSpan(textView.context.getAttrColor(ideditor.api.skin.R.attr.main_content_foreground_color_hint))
         textView.text = SpannableString(s).apply {
             setSpan(foregroundColorSpan, title.length + 2, title.length + 2 + hint.length, Spannable.SPAN_INCLUSIVE_INCLUSIVE)
         }

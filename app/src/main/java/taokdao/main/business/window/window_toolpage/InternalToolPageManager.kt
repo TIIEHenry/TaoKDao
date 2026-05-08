@@ -5,7 +5,7 @@ import taokdao.api.ui.toolpage.groups.build.IBuildToolGroup
 import taokdao.api.ui.toolpage.groups.search.ISearchToolGroup
 import taokdao.api.ui.toolpage.groups.tip.ITipToolGroup
 import taokdao.api.ui.toolpage.internal.IInternalToolPageManager
-import taokdao.window.toolpages.build.BuildToolGroupFragment
+import taokdao.window.toolpages.builder.BuildToolGroupFragment
 import taokdao.window.toolpages.search.SearchToolPageFragment
 import taokdao.window.toolpages.tips.TipsToolGroupFragment
 

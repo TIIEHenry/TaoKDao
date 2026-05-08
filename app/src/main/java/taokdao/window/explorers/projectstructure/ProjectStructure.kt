@@ -3,7 +3,8 @@ package taokdao.window.explorers.projectstructure
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.lxj.androidktx.core.runOnUIThread
+import android.os.Handler
+import android.os.Looper
 import org.jetbrains.anko.doAsync
 import tiiehenry.ideditor.databinding.ExplorersProjectstructureBinding
 import taokdao.api.data.bean.Properties
@@ -127,7 +128,7 @@ class ProjectStructure(val main: IMainView) : ExplorerFragment(
     }
 
     private fun clear() {
-        runOnUIThread {
+        Handler(Looper.getMainLooper()).post {
             treeViewAdapter.refresh(mutableListOf())
         }
     }
