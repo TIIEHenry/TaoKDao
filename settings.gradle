@@ -55,7 +55,11 @@ include ':app',
 //        ':MarkDownViewer-release'
 
 includeBuild 'TaoKDao-API'
-includeBuild 'Android-Dialogs-Interface'
+includeBuild('Android-Dialogs-Interface') {
+    dependencySubstitution {
+        substitute module('tiiehenry.android.ui.dialogs:wrapped_md_dialogs') using project(':wrapped_md_dialogs')
+    }
+}
 //includeBuild '../../DynamicLoader'
 //includeBuild '../../MarkDownViewer'
 //includeBuild '../../Nota-Toolkit/Nota-Toolkit'

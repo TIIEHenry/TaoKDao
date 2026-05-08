@@ -1,0 +1,179 @@
+[versions]
+# Build Tools
+android-gradle-plugin = "9.0.0"
+kotlin = "2.3.0"
+kotlin-coroutines = "1.10.2"
+
+# Android SDK
+compile-sdk = "36"
+target-sdk = "36"
+min-sdk = "28"
+
+# AndroidX
+androidx-core = "1.15.0"
+androidx-appcompat = "1.7.1"
+androidx-recyclerview = "1.4.0"
+androidx-fragment = "1.8.9"
+androidx-constraintlayout = "2.2.1"
+androidx-lifecycle = "2.10.0"
+androidx-navigation = "2.8.5"
+androidx-room = "2.6.1"
+androidx-paging = "3.3.5"
+androidx-annotation = "1.9.1"
+androidx-legacy = "1.0.0"
+androidx-viewpager = "1.1.0"
+
+# Material
+material = "1.13.0"
+
+# Network
+retrofit = "2.4.0"
+okhttp = "3.11.0"
+
+# Reactive
+rxjava = "2.2.4"
+rxkotlin = "2.2.0"
+rxandroid = "2.1.0"
+rxbinding = "3.0.0-alpha2"
+autodispose = "1.1.0"
+
+# Image Loading
+glide = "4.8.0"
+
+# DI
+kodein = "6.0.1"
+
+# Utilities
+anko = "0.10.8"
+mmkv = "2.3.0"
+agentweb = "4.1.3"
+
+# UI Components
+xpopup = "1.9.12"
+soulpermission = "1.2.0_x"
+material-dialogs = "3.3.0"
+markwon = "4.6.2"
+
+# Crash Reporting
+xcrash = "3.1.0"
+
+# Template Engine
+velocity-tools = "3.1"
+
+# LSP
+lsp4j = "1.0.0"
+lsp4j-antlr = "0.10.0"
+antlr4 = "4.8"
+
+# Plugin System
+replugin = "2.3.3"
+
+# Testing
+junit = "4.13.2"
+androidx-test-ext-junit = "1.3.0"
+espresso = "3.6.1"
+robolectric = "4.14.1"
+leakcanary = "2.14"
+
+[libraries]
+# Kotlin
+kotlin-stdlib-jdk7 = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk7", version.ref = "kotlin" }
+kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect", version.ref = "kotlin" }
+kotlin-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlin-coroutines" }
+
+# AndroidX Core
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
+androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "androidx-recyclerview" }
+androidx-fragment = { group = "androidx.fragment", name = "fragment", version.ref = "androidx-fragment" }
+androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "androidx-fragment" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
+androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "androidx-annotation" }
+androidx-legacy-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "androidx-legacy" }
+androidx-viewpager = { group = "androidx.viewpager", name = "viewpager", version.ref = "androidx-viewpager" }
+
+# AndroidX Lifecycle
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-extensions = { group = "androidx.lifecycle", name = "lifecycle-extensions", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata", version.ref = "androidx-lifecycle" }
+
+# AndroidX Navigation
+androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "androidx-navigation" }
+androidx-navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "androidx-navigation" }
+
+# AndroidX Room
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "androidx-room" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "androidx-room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "androidx-room" }
+
+# AndroidX Paging
+androidx-paging-runtime = { group = "androidx.paging", name = "paging-runtime", version.ref = "androidx-paging" }
+
+# Material
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+# Network
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+retrofit-rxjava = { group = "com.squareup.retrofit2", name = "adapter-rxjava2", version.ref = "retrofit" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+
+# RxJava
+rxjava = { group = "io.reactivex.rxjava2", name = "rxjava", version.ref = "rxjava" }
+rxkotlin = { group = "io.reactivex.rxjava2", name = "rxkotlin", version.ref = "rxkotlin" }
+rxandroid = { group = "io.reactivex.rxjava2", name = "rxandroid", version.ref = "rxandroid" }
+rxbinding-core = { group = "com.jakewharton.rxbinding3", name = "rxbinding-core", version.ref = "rxbinding" }
+rxbinding-appcompat = { group = "com.jakewharton.rxbinding3", name = "rxbinding-appcompat", version.ref = "rxbinding" }
+rxbinding-recyclerview = { group = "com.jakewharton.rxbinding3", name = "rxbinding-recyclerview", version.ref = "rxbinding" }
+autodispose-android = { group = "com.uber.autodispose", name = "autodispose-android", version.ref = "autodispose" }
+autodispose-ktx = { group = "com.uber.autodispose", name = "autodispose-ktx", version.ref = "autodispose" }
+
+# Image Loading
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+
+# Dependency Injection
+kodein = { group = "org.kodein.di", name = "kodein-di-generic-jvm", version.ref = "kodein" }
+kodein-androidx = { group = "org.kodein.di", name = "kodein-di-framework-android-x", version.ref = "kodein" }
+
+# Utilities
+anko-commons = { group = "org.jetbrains.anko", name = "anko-commons", version.ref = "anko" }
+anko-coroutines = { group = "org.jetbrains.anko", name = "anko-coroutines", version.ref = "anko" }
+mmkv = { group = "com.tencent", name = "mmkv-static", version.ref = "mmkv" }
+agentweb = { group = "com.just.agentweb", name = "agentweb", version.ref = "agentweb" }
+velocity-tools = { group = "org.apache.velocity.tools", name = "velocity-tools-generic", version.ref = "velocity-tools" }
+
+# UI Components
+xpopup = { group = "com.lxj", name = "xpopup", version.ref = "xpopup" }
+soulpermission = { group = "com.qw", name = "soulpermission", version.ref = "soulpermission" }
+material-dialogs-core = { group = "com.afollestad.material-dialogs", name = "core", version.ref = "material-dialogs" }
+material-dialogs-input = { group = "com.afollestad.material-dialogs", name = "input", version.ref = "material-dialogs" }
+markwon-core = { group = "io.noties.markwon", name = "core", version.ref = "markwon" }
+
+# Crash Reporting
+xcrash = { group = "com.iqiyi.xcrash", name = "xcrash-android-lib", version.ref = "xcrash" }
+
+# LSP & Parser
+lsp4j = { group = "org.eclipse.lsp4j", name = "org.eclipse.lsp4j", version.ref = "lsp4j" }
+lsp4j-antlr = { group = "org.eclipse.lsp4j", name = "org.eclipse.lsp4j", version.ref = "lsp4j-antlr" }
+antlr4-runtime = { group = "org.antlr", name = "antlr4-runtime", version.ref = "antlr4" }
+
+# Plugin System
+replugin-host = { group = "com.qihoo360.replugin", name = "replugin-host-lib", version.ref = "replugin" }
+replugin-plugin = { group = "com.qihoo360.replugin", name = "replugin-plugin-lib", version.ref = "replugin" }
+
+# Testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+espresso-contrib = { group = "androidx.test.espresso", name = "espresso-contrib", version.ref = "espresso" }
+robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
+leakcanary = { group = "com.squareup.leakcanary", name = "leakcanary-android", version.ref = "leakcanary" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
+android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }

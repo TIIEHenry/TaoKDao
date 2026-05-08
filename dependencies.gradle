@@ -1,21 +1,25 @@
 ext {
     versions = [
-            kotlin               : '1.3.72',
-            kotlin_coroutines    : '1.3.3',
+            kotlin               : '2.3.0',
+            kotlin_coroutines    : '1.10.2',
 
             anko                 : "0.10.8",
-            android_plugin       : '3.5.1',
-//            android_plugin       : '5.4.1',
+            android_plugin       : '9.0.0',
 
             replugin             : '2.3.3',
 
-            support              : '1.1.0',
-            constraintlayout     : '2.0.0-beta4',
+            androidx_core        : '1.15.0',
+            androidx_appcompat   : '1.7.1',
+            androidx_recyclerview: '1.4.0',
+            androidx_fragment    : '1.8.9',
+            androidx_constraintlayout: '2.2.1',
+            androidx_lifecycle   : '2.10.0',
+            androidx_navigation  : '2.8.5',
+            androidx_room        : '2.6.1',
+            androidx_paging      : '3.3.5',
+            androidx_annotation  : '1.9.1',
 
-            arch_comp_lifecycle  : '2.0.0',
-            arch_comp_persistence: '2.1.0-alpha06',
-            arch_comp_navigation : '2.1.0-alpha02',
-            arch_comp_paging     : '2.1.0',
+            material             : '1.13.0',
 
             retrofit             : '2.4.0',
             okhttp               : '3.11.0',
@@ -29,11 +33,18 @@ ext {
             rxbinding            : '3.0.0-alpha2',
             autodispose          : '1.1.0',
 
-            leakcanary           : '1.6.2',
+            leakcanary           : '2.14',
 
-            espresso             : '3.1.0',
-            robolectric          : '3.3.2',
-            junit                : '4.12'
+            espresso             : '3.6.1',
+            robolectric          : '4.14.1',
+            junit                : '4.13.2',
+            
+            support              : '1.0.0',
+            constraintlayout     : '2.2.1',
+            arch_comp_lifecycle  : '2.2.0',
+            arch_comp_navigation : '2.8.5',
+            arch_comp_paging     : '3.3.5',
+            arch_comp_persistence: '2.6.1'
     ]
 
     libs = [
@@ -123,7 +134,7 @@ ext {
             leak_canary_debug_support: [group: 'com.squareup.leakcanary', name: 'leakcanary-support-fragment', version: versions.leakcanary],
             leak_canary_release      : [group: 'com.squareup.leakcanary', name: 'leakcanary-android-no-op', version: versions.leakcanary],
 
-            junit                    : [group: 'junit', name: 'junit', version: '4.12'],
+            junit                    : [group: 'junit', name: 'junit', version: versions.junit],
 
             mockito_kotlin           : [group: 'com.nhaarman', name: 'mockito-kotlin', version: '1.5.0'],
 
