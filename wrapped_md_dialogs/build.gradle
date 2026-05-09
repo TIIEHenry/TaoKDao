@@ -38,12 +38,12 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
     implementation project(':dialogs_public_api')
 
-    implementation 'com.afollestad.material-dialogs:core:3.3.0'
-    implementation 'com.afollestad.material-dialogs:input:3.3.0'
+    implementation libs.material.dialogs.core
+    implementation libs.material.dialogs.input
 
-    implementation 'androidx.annotation:annotation:1.10.0'
-    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation libs.androidx.annotation
+    implementation libs.androidx.recyclerview
 
-    implementation 'androidx.core:core-ktx:1.18.0'
-    implementation 'org.jetbrains.anko:anko-commons:0.10.8'
+    implementation libs.androidx.core.ktx
+    implementation libs.anko.commons
 }

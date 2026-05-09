@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'org.jetbrains.kotlin.android'
 
 group "tiiehenry.taokdao.api"
 version "1.3.1"
@@ -36,13 +35,13 @@ android {
 dependencies {
     api project(':dialogs_public_api')
 
-    api 'androidx.lifecycle:lifecycle-runtime:2.10.0'
-    api 'androidx.appcompat:appcompat:1.7.1'
-    api 'androidx.fragment:fragment:1.8.9'
-    api 'androidx.recyclerview:recyclerview:1.4.0'
-    api 'androidx.documentfile:documentfile:1.0.1'
+    api libs.androidx.lifecycle.runtime.ktx
+    api libs.androidx.appcompat
+    api libs.androidx.fragment
+    api libs.androidx.recyclerview
+    api libs.androidx.documentfile
 
-    api 'com.alibaba:fastjson:1.1.71.android'
+    api libs.fastjson
 
-    api 'org.jetbrains.kotlin:kotlin-stdlib:2.3.0'
+    api libs.kotlin.stdlib
 }

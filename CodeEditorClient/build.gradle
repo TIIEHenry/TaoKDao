@@ -29,9 +29,9 @@ dependencies {
     implementation project(':CodeEditor')
     implementation project(':CodeEditorAntlr')
 
-    implementation 'androidx.annotation:annotation:1.8.0'
-    implementation 'androidx.legacy:legacy-preference-v14:1.0.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation libs.androidx.annotation
+    implementation libs.androidx.legacy.preference.v14
+    implementation libs.androidx.constraintlayout
     implementation 'tiiehenry.nota.toolkit:android-base:+'
 
 }

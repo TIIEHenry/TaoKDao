@@ -1,7 +1,0 @@
-ext {
-    sdk_versions = [
-            compileSdkVersion: 36,
-            targetSdkVersion : 36,
-            minSdkVersion    : 28,
-    ]
-}
