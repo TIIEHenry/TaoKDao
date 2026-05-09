@@ -1,6 +1,7 @@
 # Gradle files
 build/
 .gradle/
+.kotlin/
 # Intellij project files
 *.iml
 *.ipr

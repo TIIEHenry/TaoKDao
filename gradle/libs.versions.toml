@@ -1,7 +1,7 @@
 [versions]
 # Build Tools
 android-gradle-plugin = "9.0.0"
-kotlin = "2.3.21"
+kotlin = "2.3.10"
 kotlin-coroutines = "1.11.0"
 
 # Android SDK
