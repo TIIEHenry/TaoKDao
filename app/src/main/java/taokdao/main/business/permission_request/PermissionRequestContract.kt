@@ -9,11 +9,13 @@ interface PermissionRequestContract {
         fun onNecessaryPermissionOK(allPermissions: Array<out Permission>?)
         fun onNecessaryPermissionDenied(allPermissions: Array<out Permission>?)
         fun showRequestPermissionDialog()
+        fun showManageStoragePermissionDialog()
     }
 
     interface P {
 
         fun checkNecessaryPermission()
+        fun checkManageExternalStorage()
     }
 
     interface M

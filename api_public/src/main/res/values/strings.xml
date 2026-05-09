@@ -29,6 +29,8 @@
 	<string name="business_file_template_fileexists_dialog_title">File Already Exists</string>
 	<string name="business_permission_request_dialog_title">Permission Check</string>
 	<string name="business_permission_request_permission_denied">Permission denied!</string>
+	<string name="business_permission_request_manage_storage_needed">TaoKDao needs "All files access" to read and write your files. In the next screen, find TaoKDao and enable "All files access".</string>
+	<string name="business_permission_request_manage_storage_recheck">Have you enabled the permission in Settings? Tap OK to continue.</string>
 	<string name="business_plugin_install_dialog_action_degrade">Degrade</string>
 	<string name="business_plugin_install_dialog_action_recover">Recover</string>
 	<string name="business_plugin_install_dialog_action_upgrade">Upgrade</string>
