@@ -6,6 +6,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.StrictMode
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.cancel
 import kotlin.coroutines.CoroutineContext
@@ -33,6 +35,8 @@ abstract class BaseMainActivity : AppCompatActivity(), IMainView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         resetPolicy()
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
 
         super.onCreate(savedInstanceState)
     }

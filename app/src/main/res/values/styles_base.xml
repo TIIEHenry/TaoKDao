@@ -3,7 +3,7 @@
 	
 	<style name="MainBaseLightDefault" parent="MainBaseDefault">
 		<!--状态栏颜色-->
-		<item name="android:statusBarColor">@color/main_appbar_background_color_light</item>
+		<item name="android:statusBarColor">@android:color/transparent</item>
 		<item name="colorPrimaryDark">@color/main_appbar_background_color_light</item>
 		<!--api 21 可用 Appbar背景色-->
 		<item name="colorPrimary">@color/main_appbar_background_color_light</item>
@@ -97,7 +97,7 @@
 	
 	<style name="MainBaseDarkDefault" parent="MainBaseDefault">
 		<!--状态栏颜色-->
-		<item name="android:statusBarColor">@color/main_appbar_background_color_dark</item>
+		<item name="android:statusBarColor">@android:color/transparent</item>
 		<item name="colorPrimaryDark">@color/main_appbar_background_color_dark</item>
 		<!--api 21 可用 Appbar背景色-->
 		<item name="android:colorPrimary">@color/main_appbar_background_color_dark</item>

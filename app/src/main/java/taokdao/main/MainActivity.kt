@@ -5,6 +5,8 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.ViewGroup
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleRegistry
 import com.qw.soul.permission.bean.Permission
@@ -166,6 +168,13 @@ class MainActivity : BaseMainActivity(), FileOpenView, FileOperateView, Category
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // 让 toolbar 延伸到状态栏后面，只对 toolbar 加 top padding
+        ViewCompat.setOnApplyWindowInsetsListener(binding.mainToolbarCl) { view, insets ->
+            val statusBarInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
+            view.setPadding(0, statusBarInsets.top, 0, 0)
+            insets
+        }
 
         actionProcessPresenter.initMainAction()
         tabToolInternal.init()
