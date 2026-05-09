@@ -14,7 +14,7 @@ import tiiehenry.ideditor.R
 import tiiehenry.ideditor.databinding.ContentsGuiderBinding
 import tiiehenry.taokdao.ui.view.treeview.*
 
-class GuiderContent(val main: MainActivity, val layout: ContentsGuiderBinding = ContentsGuiderBinding.inflate(main.layoutInflater)) {
+class GuiderContent(val main: MainActivity, val layout: ContentsGuiderBinding) {
 
     private val categoryListener = object : TreeNodeListener<CategoryNode, TreeBinder.ViewHolder> {
         override fun onClick(node: TreeNode<CategoryNode>, holder: TreeBinder.ViewHolder, adapter: TreeViewAdapter<CategoryNode, TreeBinder.ViewHolder>): Boolean {
@@ -28,7 +28,12 @@ class GuiderContent(val main: MainActivity, val layout: ContentsGuiderBinding = 
 
     private val entryListener = object : TreeNodeListener<EntryNode, TreeBinder.ViewHolder> {
         override fun onClick(node: TreeNode<EntryNode>, holder: TreeBinder.ViewHolder, adapter: TreeViewAdapter<EntryNode, TreeBinder.ViewHolder>): Boolean {
-            node.content.click.run()
+            android.util.Log.e("GuiderContent", "entry clicked: ${node.content.label}")
+            try {
+                node.content.click.run()
+            } catch (e: Exception) {
+                android.util.Log.e("GuiderContent", "click error", e)
+            }
             return false
         }
 

@@ -169,6 +169,8 @@ class MainActivity : BaseMainActivity(), FileOpenView, FileOperateView, Category
 
         actionProcessPresenter.initMainAction()
         tabToolInternal.init()
+        dialogManagerPresenter.init()
+        permissionRequestPresenter.checkNecessaryPermission()
 
 //
 //        val typedValue = TypedValue();
@@ -191,12 +193,10 @@ class MainActivity : BaseMainActivity(), FileOpenView, FileOperateView, Category
         toolBarLayoutPresenter.init()
 
         contentManagePresenter.init()
-        GuiderContent(this).init()
+        GuiderContent(this, binding.mainContentGuider).init()
         explorerWindowPresenter.init()
         tabToolWindowPresenter.init()
         dialogManagerPresenter.init()
-
-        permissionRequestPresenter.checkNecessaryPermission()
 
         initListener()
 

@@ -28,28 +28,25 @@ class ContentManageViewWrapper(
     private val contentAdapter = ContentAdapter(view.activity.supportFragmentManager)
 
     override fun initContentManger() {
-        MainAction.onCreate.addObserver {
-            binding.mainBodyContentViewPager.apply {
-//                offscreenPageLimit=0
-                adapter = contentAdapter
-                addOnPageChangeListener(TabLayoutOnPageChangeListener(binding.mainToolbarTabLayout))
-                addOnPageChangeListener(contentManagePresenter)
-            }
-            binding.mainToolbarTabLayout.apply {
-                isTabIndicatorFullWidth = false
-                setupWithViewPager(binding.mainBodyContentViewPager, true)
-                setOnTabLongClickListener {
-                    showContentListPopup(contentAdapter.dataList)
-                    true
-                }
-            }.addOnTabSelectedListener(contentManagePresenter)
-
-            checkContentGuider()
-
-            view.indicatorManager.endIndicator.setOnLongClickListener {
-                contentManagePresenter.showSettingWindow()
+        binding.mainBodyContentViewPager.apply {
+            adapter = contentAdapter
+            addOnPageChangeListener(TabLayoutOnPageChangeListener(binding.mainToolbarTabLayout))
+            addOnPageChangeListener(contentManagePresenter)
+        }
+        binding.mainToolbarTabLayout.apply {
+            isTabIndicatorFullWidth = false
+            setupWithViewPager(binding.mainBodyContentViewPager, true)
+            setOnTabLongClickListener {
+                showContentListPopup(contentAdapter.dataList)
                 true
             }
+        }.addOnTabSelectedListener(contentManagePresenter)
+
+        checkContentGuider()
+
+        view.indicatorManager.endIndicator.setOnLongClickListener {
+            contentManagePresenter.showSettingWindow()
+            true
         }
     }
 
