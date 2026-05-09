@@ -38,35 +38,22 @@ dependencyResolutionManagement {
 
 rootProject.name = "TaoKDao"
 
+// 主项目模块
 include ':app',
-//        ':builderc',
-//        ':lib-jdk-1_7',
-//        ":lib-google-java-format",
+        ':common',
         ':DynamicLoader',
         ':CodeEditor',
         ':CodeEditorAntlr',
         ':encodedetector',
         ':encodehelper',
         ':filej'
-//include        ':CodeEditorClient'
-//        ':CodeEditorAntlr-smali',
-//        ':markwon-editor',
-//        ':dx',
-//        ':MarkDownViewer-release'
 
-includeBuild 'TaoKDao-API'
-includeBuild('Android-Dialogs-Interface') {
-    dependencySubstitution {
-        substitute module('tiiehenry.android.ui.dialogs:wrapped_md_dialogs') using project(':wrapped_md_dialogs')
-    }
-}
-//includeBuild '../../DynamicLoader'
-//includeBuild '../../MarkDownViewer'
-//includeBuild '../../Nota-Toolkit/Nota-Toolkit'
-//includeBuild '../../Nota-Toolkit/Nota-Toolkit-Android'
-//includeBuild '../../ScriptWrapper/ScriptWrapper'
-//includeBuild '../../ScriptWrapper/ScriptWrapperCollection'
-//includeBuild '../../ScriptWrapper/ScriptWrapperApp'
-//includeBuild '../../Shadow'
+// 从 TaoKDao-API 提取的模块（直接以子模块包含）
+include ':api_public'
 
-include ':common'
+include ':api_skin'
+
+// 从 Android-Dialogs-Interface 提取的模块（直接以子模块包含）
+include ':dialogs_public_api'
+
+include ':wrapped_md_dialogs'

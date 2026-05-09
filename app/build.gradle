@@ -117,9 +117,9 @@ dependencies {
     androidTestImplementation libs.espresso.core
 
     // TaoKDao API
-    implementation 'tiiehenry.taokdao.api:api_public:+'
-    implementation 'tiiehenry.taokdao.api:api_skin:+'
-    implementation 'tiiehenry.android.ui.dialogs:wrapped_md_dialogs:+'
+    implementation project(':api_public')
+    implementation project(':api_skin')
+    implementation project(':wrapped_md_dialogs')
 
     // Project modules
     implementation project(':common')
