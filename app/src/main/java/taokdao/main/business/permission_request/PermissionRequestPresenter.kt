@@ -1,8 +1,13 @@
 package taokdao.main.business.permission_request
 
 import android.Manifest
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Environment
+import android.provider.Settings
+import androidx.lifecycle.DefaultLifecycleObserver
+import androidx.lifecycle.LifecycleOwner
 import com.qw.soul.permission.SoulPermission
 import com.qw.soul.permission.bean.Permission
 import com.qw.soul.permission.bean.Permissions
@@ -36,10 +41,27 @@ class PermissionRequestPresenter(private val view: PermissionRequestContract.V) 
     override fun checkManageExternalStorage() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             if (!Environment.isExternalStorageManager()) {
-                view.showManageStoragePermissionDialog()
+                openManageStorageSettingsAndObserve()
                 return
             }
         }
         view.onNecessaryPermissionOK(null)
+    }
+
+    private fun openManageStorageSettingsAndObserve() {
+        // Show explanation dialog, then open settings
+        view.showManageStoragePermissionDialog()
+        // Observe lifecycle to re-check when user returns from settings
+        view.activity.lifecycle.addObserver(object : DefaultLifecycleObserver {
+            override fun onResume(owner: LifecycleOwner) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                    if (Environment.isExternalStorageManager()) {
+                        // Permission granted, clean up observer and proceed
+                        view.activity.lifecycle.removeObserver(this)
+                        view.onNecessaryPermissionOK(null)
+                    }
+                }
+            }
+        })
     }
 }

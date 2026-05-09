@@ -10,6 +10,7 @@ interface PermissionRequestContract {
         fun onNecessaryPermissionDenied(allPermissions: Array<out Permission>?)
         fun showRequestPermissionDialog()
         fun showManageStoragePermissionDialog()
+        fun openManageStorageSettings()
     }
 
     interface P {
