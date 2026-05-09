@@ -72,7 +72,7 @@ class ToolPageWindowPopupView(val main: IMainView, val vw: ToolPageWindowViewWra
             menuAdapter.refresh(list.reversed())
 
             val label = layout.tvToolpageToolbarMenuLabel
-            label.text = toolGroup.prop.label
+            label.text = toolGroup.getLabel()
             //                    iconImgv.setImageDrawable(data.icon)
             //                    titleTxtv.text = data.label
             label.visibility(!isContainer)
@@ -207,8 +207,8 @@ class ToolPageWindowPopupView(val main: IMainView, val vw: ToolPageWindowViewWra
 
     private fun newTabView(data: IToolPage): TabLayout.Tab {
         val v = View.inflate(main.context, R.layout.toolpage_tooltab_spinner_item, null)
-        v.find<ImageView>(R.id.iv_icon).setImageDrawable(data.prop.icon)
-        v.find<TextView>(R.id.tv_label).text = data.prop.label
+        v.find<ImageView>(R.id.iv_icon).setImageDrawable(data.getIcon())
+        v.find<TextView>(R.id.tv_label).text = data.getLabel()
         return layout.tabLayoutToolpage.newTab().apply {
             tag = data
             customView = v

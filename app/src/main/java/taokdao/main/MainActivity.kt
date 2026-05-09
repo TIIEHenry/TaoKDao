@@ -142,7 +142,6 @@ class MainActivity : BaseMainActivity(), FileOpenView, FileOperateView, Category
     override fun getDialogs(): Dialogs = Dialogs.global
     override fun getFileProvider() = fileProviderPresenter
     override fun getIndicatorManager() = indicateManagePresenter
-    override val lifecycle: Lifecycle = LifecycleRegistry(this)
     override fun getActivity(): MainActivity = this
 
     override val mainHandler = MainHandler(this)

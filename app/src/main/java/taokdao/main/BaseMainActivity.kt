@@ -6,9 +6,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.StrictMode
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.MainScope
+import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.cancel
+import kotlin.coroutines.CoroutineContext
 import taokdao.api.base.annotation.relation.MainMethod
 import taokdao.api.data.mmkv.IMMKV
 import taokdao.api.event.tag.IEventTag
@@ -22,7 +22,10 @@ import tiiehenry.ktx.res.getDimen
 import tiiehenry.taokdao.app.App
 import ideditor.api.skin.R
 
-abstract class BaseMainActivity : AppCompatActivity(), IMainView, CoroutineScope by MainScope() {
+abstract class BaseMainActivity : AppCompatActivity(), IMainView {
+
+    override val coroutineContext: CoroutineContext
+        get() = lifecycleScope.coroutineContext
 
     override fun getContext(): Context = this
 

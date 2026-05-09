@@ -26,9 +26,10 @@ open class CTFragment(
         return InnerIdentifier.Content.CODE_TEMPLATE_EDITOR
     }
 
-    override val label: String
-        get() = codeEditor.ioController.currentPath?.let { File(it).nameWithoutExtension }
-            ?: super.label
+    override fun getLabel(): String {
+        return codeEditor.ioController.currentPath?.let { File(it).nameWithoutExtension }
+            ?: super.getLabel()
+    }
 
     override fun initView(view: View) {
         templateBinding.etExtension.addTextChangedListener(SimpleTextWatcher.newAfterWatcher { s ->

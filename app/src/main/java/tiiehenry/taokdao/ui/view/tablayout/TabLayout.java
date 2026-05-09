@@ -1953,7 +1953,7 @@ public class TabLayout extends HorizontalScrollView {
                 parent.updateTabViews(true);
             }
             updateView();
-            if (BadgeUtils.USE_COMPAT_PARENT
+            if (false
                     && view.hasBadgeDrawable()
                     && view.badgeDrawable.isVisible()) {
                 // Invalidate the TabView if icon visibility has changed and a badge is displayed.
@@ -2095,7 +2095,7 @@ public class TabLayout extends HorizontalScrollView {
                 parent.updateTabViews(true);
             }
             this.updateView();
-            if (BadgeUtils.USE_COMPAT_PARENT
+            if (false
                     && view.hasBadgeDrawable()
                     && view.badgeDrawable.isVisible()) {
                 // Invalidate the TabView if label visibility has changed and a badge is displayed.
@@ -2516,7 +2516,7 @@ public class TabLayout extends HorizontalScrollView {
 
         private void inflateAndAddDefaultIconView() {
             ViewGroup iconViewParent = this;
-            if (BadgeUtils.USE_COMPAT_PARENT) {
+            if (false) {
                 iconViewParent = createPreApi18BadgeAnchorRoot();
                 addView(iconViewParent, 0);
             }
@@ -2529,7 +2529,7 @@ public class TabLayout extends HorizontalScrollView {
 
         private void inflateAndAddDefaultTextView() {
             ViewGroup textViewParent = this;
-            if (BadgeUtils.USE_COMPAT_PARENT) {
+            if (false) {
                 textViewParent = createPreApi18BadgeAnchorRoot();
                 addView(textViewParent);
             }
@@ -2765,7 +2765,7 @@ public class TabLayout extends HorizontalScrollView {
             if (anchor != iconView && anchor != textView) {
                 return null;
             }
-            return BadgeUtils.USE_COMPAT_PARENT ? ((FrameLayout) anchor.getParent()) : null;
+            return false ? ((FrameLayout) anchor.getParent()) : null;
         }
 
         /**

@@ -46,7 +46,7 @@ kodein = "7.5.0"
 # Utilities
 anko = "0.10.8"
 mmkv = "2.3.0"
-agentweb = "4.1.3"
+agentweb = "v5.1.1-androidx"
 
 # UI Components
 xpopup = "1.9.12"
@@ -148,7 +148,8 @@ kodein-androidx = { group = "org.kodein.di", name = "kodein-di-framework-android
 anko-commons = { group = "org.jetbrains.anko", name = "anko-commons", version.ref = "anko" }
 anko-coroutines = { group = "org.jetbrains.anko", name = "anko-coroutines", version.ref = "anko" }
 mmkv = { group = "com.tencent", name = "mmkv-static", version.ref = "mmkv" }
-agentweb = { group = "com.just.agentweb", name = "agentweb", version.ref = "agentweb" }
+agentweb-core = { group = "io.github.justson", name = "agentweb-core", version.ref = "agentweb" }
+agentweb-filechooser = { group = "io.github.justson", name = "agentweb-filechooser", version.ref = "agentweb" }
 velocity-tools = { group = "org.apache.velocity.tools", name = "velocity-tools-generic", version.ref = "velocity-tools" }
 
 # UI Components

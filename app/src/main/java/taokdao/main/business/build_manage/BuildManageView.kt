@@ -23,7 +23,7 @@ interface BuildManageView : BuildManageContract.V {
 //        FileBuilderPool.addFileBuilder(MarkdownBuilder)
     }
 
-    override fun showFileBuilderChooseDialog(builderList: ArrayList<IFileBuilder>, file: File, id: String?, buildDefault: Boolean) {
+    override fun showFileBuilderChooseDialog(builderList: List<IFileBuilder>, file: File, id: String?, buildDefault: Boolean) {
         val labelList = builderList.map { it.label }
         var index = builderList.indexOfFirst { it.id() == id }
         index = if (index == -1) {
@@ -72,11 +72,11 @@ interface BuildManageView : BuildManageContract.V {
                 .show()
     }
 
-    override fun showBuildOptionDialogForFile(builder: IFileBuilder, optionList: MutableList<IBuildOption<File>>, file: File) {
+    override fun showBuildOptionDialogForFile(builder: IFileBuilder, optionList: List<IBuildOption<File>>, file: File) {
         FileBuilderOptionPopup(this, optionList.map { Pair(it, file) }, buildManagePresenter, builder).show(ActivityMainBinding.bind(contentView).mainToolbarMenuRv)
     }
 
-    override fun showBuildOptionDialogForProject(optionList: MutableList<IBuildOption<Project>>, project: Project) {
+    override fun showBuildOptionDialogForProject(optionList: List<IBuildOption<Project>>, project: Project) {
         ProjectBuildOptionPopup(this, optionList.map { Pair(it, project) }, buildManagePresenter).show(ActivityMainBinding.bind(contentView).mainToolbarMenuRv)
     }
 }

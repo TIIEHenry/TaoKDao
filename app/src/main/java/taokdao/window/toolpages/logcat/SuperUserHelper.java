@@ -21,7 +21,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import tiiehenry.android.ui.dialogs.api.strategy.Dialogs;
-import tiiehenry.taokdao.BuildConfig;
+import tiiehenry.ideditor.BuildConfig;
 import tiiehenry.ideditor.R;
 
 /*

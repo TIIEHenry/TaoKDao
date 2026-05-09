@@ -8,11 +8,11 @@ abstract class SimpleIFileOperator(val properties: Properties) : IFileOperator {
 
     override fun id(): String = properties.id
 
-    override val icon: Drawable? get() = null
+    override fun getIcon(): Drawable? = null
 
-    override val label: String get() = properties.label
+    override fun getLabel(): String = properties.label
 
-    override val description: String? get() = properties.description
+    override fun getDescription(): String? = properties.description
 
     override fun isSupport(path: String): Boolean {
         return true

@@ -13,14 +13,14 @@ import java.util.*
 interface BuildManageContract {
     interface V : IMainView {
         fun addInternalFileBuilder()
-        fun showFileBuilderChooseDialog(builderList: ArrayList<IFileBuilder>, file: File, id: String?, buildDefault: Boolean)
+        fun showFileBuilderChooseDialog(builderList: List<IFileBuilder>, file: File, id: String?, buildDefault: Boolean)
         fun alertNoBuilder()
         fun alertNoBuildOption()
         fun alertNoProjectOpened()
 
-        fun showBuildOptionDialogForFile(builder: IFileBuilder, optionList: MutableList<IBuildOption<File>>, file: File)
+        fun showBuildOptionDialogForFile(builder: IFileBuilder, optionList: List<IBuildOption<File>>, file: File)
 
-        fun showBuildOptionDialogForProject(optionList: MutableList<IBuildOption<Project>>, project: Project)
+        fun showBuildOptionDialogForProject(optionList: List<IBuildOption<Project>>, project: Project)
 
         val buildManagePresenter: BuildManagePresenter
 

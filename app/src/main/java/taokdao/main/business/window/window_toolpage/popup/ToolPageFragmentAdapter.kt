@@ -13,7 +13,7 @@ class ToolPageFragmentAdapter(fm: FragmentManager) : DynamicFragmentStateAdapter
     }
 
     override fun getPageTitle(position: Int): CharSequence {
-        return dataList[position].prop.label
+        return dataList[position].getLabel()
     }
 
 

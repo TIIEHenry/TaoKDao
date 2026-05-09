@@ -227,4 +227,6 @@
 	<string name="file_builders_markdownviewer_preview_label">Preview</string>
 	<string name="content_nocontent_opened">No content opened!</string>
 	<string name="business_project_manage_openfailed_error_plugin">open project error: plugin incompatibility</string>
+	<string name="event_content_prefix">Content</string>
+	<string name="event_initializer_prefix">Init</string>
 </resources>

@@ -15,7 +15,9 @@ interface ProjectTemplateView : ProjectTemplateContract.V {
     override fun addDefaultProjectTemplate() {
         val drawable = getDrawable(R.drawable.ic_file_any)
         val template = object : IProjectTemplate {
-            override val prop: IPanelProp=PanelProp(context, R.string.business_project_templates_filetemplate_label, null)
+            override fun getIcon() = drawable
+            override fun getLabel(): String = getString(R.string.business_project_templates_filetemplate_label)
+            override fun getDescription(): String = ""
             override fun id(): String = "fileTemplate"
             override fun generate(dir: File) {
                 fileTemplateGenerator.showChooseDialog(dir)
@@ -29,7 +31,7 @@ interface ProjectTemplateView : ProjectTemplateContract.V {
     }
 
     override fun showProjectTemplateChooseDialog(templateList: MutableList<IProjectTemplate>, dir: File) {
-        templateList.sortBy { it.prop.label.lowercase(Locale.getDefault()) }
+        templateList.sortBy { it.getLabel().lowercase(Locale.getDefault()) }
 
         val chooseAdapter = ProjectTemplateChooserAdapter(templateList)
 

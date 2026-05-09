@@ -170,5 +170,6 @@ dependencies {
     implementation libs.mmkv
 
     // WebView
-    implementation libs.agentweb
+    implementation libs.agentweb.core
+    implementation libs.agentweb.filechooser // (可选)
 }

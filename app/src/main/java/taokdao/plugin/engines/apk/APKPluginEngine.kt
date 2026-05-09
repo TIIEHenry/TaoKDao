@@ -22,7 +22,6 @@ import java.io.IOException
 class APKPluginEngine(val main: IMainContext)
     : PluginEngine(Properties(InnerIdentifier.PluginEngine.APK, "APK")) {
 
-    override val icon: Drawable? get() = null
     private val pluginManager = DLPluginManager.getInstance(main.context)
     private val apkPluginWorkDir = File(main.fileSystem.internalWorkDir, "plugin/apk").apply { mkdirs() }
 

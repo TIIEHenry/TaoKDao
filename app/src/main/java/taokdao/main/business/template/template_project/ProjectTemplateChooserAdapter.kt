@@ -11,9 +11,9 @@ class ProjectTemplateChooserAdapter(dataList: List<IProjectTemplate>) : BaseIdRe
     }
 
     override fun bindData(holder: RecyclerViewHolder, position: Int, item: IProjectTemplate) {
-        holder.getImageView(R.id.iv_icon).setImageDrawable(item.prop.icon)
-        holder.getTextView(R.id.tv_label).text = item.prop.label
-        holder.getTextView(R.id.tv_description).text = item.prop.description
+        holder.getImageView(R.id.iv_icon).setImageDrawable(item.getIcon())
+        holder.getTextView(R.id.tv_label).text = item.getLabel()
+        holder.getTextView(R.id.tv_description).text = item.getDescription()
     }
 
 }
