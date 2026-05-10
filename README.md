@@ -34,6 +34,18 @@
 | **主题切换** | 多主题/配色方案支持 |
 | **崩溃监控** | 集成 xCrash，实时捕获与上报崩溃信息 |
 
+## 界面预览
+
+<p align="center">
+  <img src="screenshots/light_java.png" width="45%" alt="Java 编辑">
+  <img src="screenshots/dark_kotlin.png" width="45%" alt="Kotlin 编辑（深色主题）">
+</p>
+
+<p align="center">
+  <img src="screenshots/light_xml.png" width="45%" alt="XML 编辑">
+  <img src="screenshots/light_explorer.png" width="45%" alt="文件浏览器">
+</p>
+
 ## 技术架构
 
 ### 架构模式

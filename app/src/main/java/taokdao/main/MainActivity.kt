@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Lifecycle
@@ -12,6 +13,7 @@ import androidx.lifecycle.LifecycleRegistry
 import com.qw.soul.permission.bean.Permission
 import taokdao.api.plugin.bean.PluginType
 import taokdao.api.setting.preference.base.IPreference
+import taokdao.api.setting.theme.ThemeMode
 import taokdao.content.guider.GuiderContent
 import taokdao.main.business.action_process.ActionProcessPresenter
 import taokdao.main.business.action_process.ActionProcessView
@@ -162,10 +164,19 @@ class MainActivity : BaseMainActivity(), FileOpenView, FileOperateView, Category
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(themeManager.themeId)
+        intent?.getStringExtra("switch_theme")?.let { theme ->
+            ThemeMode.current = if (theme == "light") ThemeMode.LIGHT else ThemeMode.DARK
+        }
+        val dark = themeManager.shouldDark()
+        val themeId = if (dark) tiiehenry.ideditor.R.style.MainDarkDefault else tiiehenry.ideditor.R.style.MainLightDefault
+        setTheme(themeId)
         themeManager.saveCurrentUIMode()
 
         super.onCreate(savedInstanceState)
+        delegate.localNightMode = if (dark)
+            androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
+        else
+            androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -270,6 +281,9 @@ class MainActivity : BaseMainActivity(), FileOpenView, FileOperateView, Category
 
     private fun handleIntent(intent: Intent?) {
         intent?.let {
+            if (it.getBooleanExtra("show_explorer", false)) {
+                explorerWindowPresenter.showWindow()
+            }
             pluginInstallPresenter.handleIntent(it)
             fileOpenPresenter.handleIntent(it)
         }
