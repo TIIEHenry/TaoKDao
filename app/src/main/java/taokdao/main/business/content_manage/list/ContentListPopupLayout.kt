@@ -13,7 +13,11 @@ class ContentListPopupLayout(val main: IMainContext, private val contentManageVi
     override fun getImplLayoutId(): Int = R.layout.content_contentlist_popup
 
     override fun onCreate() {
-        val binding = ContentContentlistPopupBinding.bind(popupContentView)
+        // XPopup PartShadowPopupView 的 popupContentView 是 PartShadowContainer（FrameLayout），
+        // 用户布局 ConstraintLayout 被 inflate 为其子 view，因此不能直接 bind popupContentView。
+        // 通过 RecyclerView 的 parent 找到实际的 ConstraintLayout 根视图。
+        val recyclerView = popupContentView.findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.content_contentlist_rv)
+        val binding = ContentContentlistPopupBinding.bind(recyclerView.parent as androidx.constraintlayout.widget.ConstraintLayout)
         binding.contentContentlistRv.apply {
             adapter = contentListAdapter
             isVerticalScrollBarEnabled = false
